@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <table border="0" width="100%">
+        <tr valign="baseline">
+            <td>
+                <ul>
+                    <li><a href="../profile/profile-nav.html">Account</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="../home-nav.html">Courses</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Inbox</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Studio</a></li>
+                    <li><a href="#">Commons</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </td>
+
+            <td>
+                <ul>
+                    <li><a href="../home.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="../grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </td>
+
+            <td>
+
+                <form>
+                <h1>
+                    <select>
+                        <option value="SpeedGrader">SpeedGrader</option>
+                    </select>
+                </h1>
+
+                <h3>Assignment Name</h3>
+
+                <input id="Assignment-Input" placeholder="Assignment Search" /><br />
+                <br />
+                <textarea cols="30" rows="2">
+                This is the assignment description.
+                </textarea><br />
+                <br />
+                <label>Points</label><br />
+                <input id="points-input"><br />
+                <br />
+
+                <label>Assignment Group</label><br />
+                <select>
+                    <option>ASSIGNMENTS</option>
+                </select>
+                <br />
+                <br />
+
+                <label>Display Grade as</label><br />
+                <select>
+                    <option>Percentage</option>
+                </select>
+            </form>
+            </td>
+
+            <td>
+                <form id="edit-assignment-form">
+                    <label for="sub-type">Submission Type</label><br />
+                    <select id="sub-type">
+                        <option>Online</option>
+                    </select><br />
+                    <br />
+
+                    <label>Online Entry Options</label><br />
+                    <input type="checkbox" value="text-entry" name="check-entry-option" id="text-entry-check">
+                    <label for="text-entry-check">Text Entry</label><br />
+                    <input type="checkbox" value="web-url" name="check-entry-option" id="web-url-check">
+                    <label for="web-url-check">Website URL</label><br />
+                    <input type="checkbox" value="media-recordings" name="check-entry-option" id="media-rec-check">
+                    <label for="media-rec-check">Media Recordings</label><br />
+                    <input type="checkbox" value="student-annotation" name="check-entry-option" id="stud-anno-check">
+                    <label for="stud-anno-check">Student Annotation</label><br />
+                    <input type="checkbox" value="file-uploads" name="check-entry-option" id="file-uploads-check">
+                    <label for="file-uploads-check">File Uploads</label>
+
+                    <br />
+                    <br />
+
+                    <label>Submission Attempts</label><br />
+                    <select id="sub-attempts">
+                        <option>Unlimited</option>
+                    </select><br />
+                    <br />
+
+                    <label>Plagarism Review</label><br />
+                    <select id="plagarism-review">
+                        <option>None</option>
+                    </select><br />
+                    <br />
+
+                    <label for="grp-assignment-check">Group Assignment</label><br />
+                    <input type="checkbox" value="group-assignment" name="grp-assignment-checklist"
+                        id="grp-assignment-check">
+                    <label for="grp-assignment-check">This is a group assignment</label><br />
+                    <br />
+
+                    <label for="peer-review-check">Peer Reviews</label><br />
+                    <input type="checkbox" value="peer-review" name="peer-review-checklist" id="peer-review-check">
+                    <label for="peer-review-check">Require Peer Reviews</label><br />
+                    <br />
+
+                    Assign<br />
+                    <label for="assign-inpt">Assign to</label><br />
+                    <input type="text" id="assign-input" value="Everyone"><br />
+                    <br />
+
+                    <label for="Due-date-pick">Due</label><br />
+                    <input type="date" id="due-date" value="2021-01-01"><br />
+                    <br />
+
+                    <label for="available-date-pick">Available from</label><br />
+                    <input type="date" id="available-date" value="2021-01-01"><br />
+                    <br />
+
+                    <label for="until-date-pick">Until</label><br />
+                    <input type="date" id="until-date" value="2021-01-01"><br />
+                    <br />
+
+                    <a href="index.html"><button type="button" id="cancel-btn">Cancel</button></a>
+                    <a href="index.html"><button type="button" id="save-btn">Save</button></a>
+                    
+
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
