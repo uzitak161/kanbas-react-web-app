@@ -2,26 +2,25 @@
     width: "84px";
     float: left;
     background-color: black;
-    position: absolute; 
+    position: absolute;
     height: 100%;
     text-align: center;
     list-style-position: inside;
     padding: 0;
-    list-style-type: none;
 }
 
-.wd-navigation-bar-options > li {
-    color: red;
-    list-style-type: none;
-    width: "100%"
-}
 
-.wd-navigation-bar-options > li p {
+.wd-navigation-bar p {
     color: red;
     margin-top: "3px";
     margin-bottom: "3px";
-
+    font-size: 12;
 }
+
+.wd-navigation-bar a {
+    text-decoration: none
+}
+
 
 
 .wd-red-icon {
@@ -30,11 +29,5 @@
     margin-bottom: "5px";
     margin-left: "5px";
     margin-right: "5px";
-    
+
 }
-
-
-
-
-
-
