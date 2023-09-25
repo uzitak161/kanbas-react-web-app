@@ -1,20 +1,19 @@
 .wd-navigation-bar {
-    width: "84px";
-    float: left;
+    width: 84px;
     background-color: black;
     position: absolute;
     height: 100%;
     text-align: center;
-    list-style-position: inside;
     padding: 0;
+    align-items: center;
+    display: block;
 }
 
 
 .wd-navigation-bar p {
     color: red;
-    margin-top: "3px";
-    margin-bottom: "3px";
-    font-size: 12;
+    font-size: 12px;
+    text-align: center;
 }
 
 .wd-navigation-bar a {
@@ -25,9 +24,19 @@
 
 .wd-red-icon {
     color: white;
-    margin-top: "5px";
-    margin-bottom: "5px";
-    margin-left: "5px";
-    margin-right: "5px";
 
 }
+
+.wd-navigation-option {
+    width: 84px;
+    height: 60px;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.wd-navigation-bar img {
+    height: auto;
+    width: 84px;
+  }
+  
