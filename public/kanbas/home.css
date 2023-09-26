@@ -4,21 +4,27 @@
     margin-top: 60px;
 }
 
-.wd-course-navigator .list-group-item a {
+.wd-course-navigator .list-group-item {
     border: none;
+    color: red;
+}
+
+.wd-course-navigator .list-group-item a {
     color: red;
     text-decoration: none;
 }
 
-.wd-course-navigator .list-group-item {
-    border: none;
+.wd-course-navigator .list-group {
+    border-radius: 0px;
 }
 
 .wd-course-navigator .list-group-item.active {
-    color: black;
     background-color: white;
-    border: none;
     border-left: 2px solid black;
+}
+
+.wd-course-navigator .list-group-item.active a {
+    color: black;
 }
 
 .wd-navigation-option.active i {
