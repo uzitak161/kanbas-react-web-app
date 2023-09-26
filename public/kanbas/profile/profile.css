@@ -1,0 +1,33 @@
+.wd-profile-summary {
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 70px;
+    position: relative;
+}
+
+/* .wd-profile-summary > p {
+    width: 30%;
+} */
+
+.wd-profile-summary a {
+    text-decoration: none;
+    color: red;
+}
+/* 
+.wd-edit-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.wd-edit-form select {
+    width: 65%;
+}
+ */
+
+
+.wd-edit-button {
+    margin: 0;
+}
+

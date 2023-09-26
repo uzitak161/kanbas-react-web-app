@@ -8,12 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../index.css" rel="stylesheet" />
     <link href="../home.css" rel="stylesheet" />
+    <link href="profile.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-1 wd-navigation-bar">
+            <div class="col-1 wd-navigation-bar position-absolute">
                 <img class="wd-NU-logo" src="../NU-logo.jpg" />
                 <ul>
                     <li class="list-group-item wd-navigation-option active">
@@ -73,7 +74,7 @@
                 </ul>
             </div>
 
-            <div class="col-2 wd-course-navigator">
+            <div class="col-2 wd-course-navigator position-relative">
                 <ul class="list-group">
                     <li class="list-group-item"><a href="#">Notifications</a></li>
                     <li class="list-group-item active"><a href="index.html">Profile</a></li>
@@ -87,6 +88,43 @@
                 </ul>
 
             </div>
+
+            <div class="col-8 wd-profile-summary">
+
+                <div class="mb-3 wd-profile-summary float-end wd-edit-button" style="position: relative;">
+                    <a href="edit.html">
+                        <button class="btn-light text-nowrap" type="button" id="edit-profile">
+                            <i class="fa fa-pencil" aria-hidden="true"></i> Edit Profile
+                        </button>
+                    </a>
+                </div>
+
+                <i class="fa fa-user" aria-hidden="true" style="font-size: 10em"></i>
+                <br />
+                <h2>Uzay Takil <i>(He/Him)</i></h2>
+
+                <br />
+
+                <h3>Contact</h3>
+                <p>
+                    No registered services, you can add some on the settings page
+                </p>
+
+                <h3>Biography</h3>
+                <p>
+                    Student, Software Engineer (soon to be), video games and technology enthusiast.
+                </p>
+
+                <h3>Links</h3>
+                <p>
+                    <a href="#">
+                        <i class="fa-solid fa-link" style="color: black"></i>
+                        YouTube <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </p>
+
+            </div>
+
         </div>
     </div>
 </body>

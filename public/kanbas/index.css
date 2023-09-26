@@ -27,6 +27,12 @@
     text-decoration: none
 }
 
+.container-fluid{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
 
 .wd-navigation-option a span {
     color: red;
@@ -47,7 +53,7 @@
     height: 65px;
     text-align: center;
     display: block;
-    position: relative;
+    /*position: relative;*/
 }
 
 .wd-navigation-bar img {
@@ -67,6 +73,10 @@
 
 .wd-navigation-option.active {
     background-color: white;
+}
+
+.wd-fake-link {
+    color: red;
 }
 
   

@@ -2,11 +2,14 @@
 .wd-course-navigator {
     margin-left: 30px;
     margin-top: 60px;
+    /* Need to figure out a way around this margin fix */
+    margin-left: 100px;
 }
 
 .wd-course-navigator .list-group-item {
     border: none;
     color: red;
+    padding-left: 8px;
 }
 
 .wd-course-navigator .list-group-item a {
