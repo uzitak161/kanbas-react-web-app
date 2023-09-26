@@ -9,11 +9,17 @@
     display: block;
 }
 
-
-.wd-navigation-bar p {
-    color: red;
-    font-size: 12px;
+.wd-navigation-bar ul {
+    list-style-type: none;
     text-align: center;
+    padding-left: 0px;
+}
+
+.wd-navigation-option { 
+    padding: 5px;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 .wd-navigation-bar a {
@@ -21,14 +27,21 @@
 }
 
 
+.wd-navigation-option a span {
+    color: red;
+    font-size: 14px;
+    margin: 5px;
+    margin-bottom: 10px
+}
+
 
 .wd-red-icon {
     color: white;
-
+    margin: 5px;
 }
 
 .wd-navigation-option {
-    width: 84px;
+    /* width: 84px; */
     height: 60px;
     text-align: center;
     display: block;
@@ -37,6 +50,11 @@
 
 .wd-navigation-bar img {
     height: auto;
+    /* width: 84px; */
+}
+
+.wd-NU-logo {
     width: 84px;
-  }
+    height: auto;
+}
   
