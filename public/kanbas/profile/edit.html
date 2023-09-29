@@ -14,7 +14,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-1 wd-navigation-bar position-absolute">
+            <div class="col-1 wd-navigation-bar position-fixed">
                 <img class="wd-NU-logo" src="../NU-logo.jpg" />
                 <ul>
                     <li class="list-group-item wd-navigation-option active">
@@ -91,9 +91,12 @@
 
             <div class="col-8 wd-profile-summary">
 
+                <h5>Uzay Takil's Profile</h5>
+                <hr />
+
                 <div class="mb-3 wd-profile-summary wd-edit-button float-end">
                     <a href="index.html">
-                        <button class="btn-light text-nowrap" type="button" id="edit-profile">
+                        <button class="btn btn-light btn-outline-dark text-nowrap" type="button" id="edit-profile">
                             <i class="fa fa-pencil" aria-hidden="true"></i> Cancel Editing
                         </button>
                     </a>
@@ -103,7 +106,7 @@
                 <br />
 
                 <form>
-                    <div class="mb-3 wd-edit-form">
+                    <div class="mb-3 w-50 wd-edit-form">
                         <label for="name-input">
                             <h6>Name:*</h6>
                         </label>
@@ -123,7 +126,7 @@
                         <input class="form-control inputlg" id="title-input" /> <br />
                     </div>
 
-                    <div class="mb-3 wd-edit-form">
+                    <div class="mb-3 w-50 wd-edit-form">
                         <h4>Contact</h4>
                         <span>
                             No registed services, you can add some on the <span class="wd-fake-link">settings</span>
@@ -136,17 +139,40 @@
                         <textarea class="form-control" rows="6">Student, Software Engineer (soon to be), video games and technology enthusiast.</textarea>
                     </div>
 
-                    <div class="mb-3 wd-edit-form">
+                    <div class="mb-3 wd-edit-form wd-link-table">
                         <h4>Links</h4>
+                        <div class="row">
+                            <div class="col-5">
+                                Title
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-5">
+                                URL
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5" style="text-align: left;">
+                                <input class="form-control" id="title-input" value="" />
+                                <button type="button" class="btn btn-light btn-sm btn-outline-dark text-nowrap">Add another link</button>
+                            </div>
+                            <div class="col-2">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                            <div class="col-5">
+                                <input class="form-control" id="title-input" value="www." /> <br />
+                            </div>
+                        </div>
+
+                        <hr />
+                        <div class="wd-profile-edit-bot">
+                            <button type="button" class="btn btn-outline-secondary text-nowrap">Cancel</button>
+                            <button type="button" class="btn btn-danger text-nowrap">Save</button>
+                        </div>
+
                     </div>
 
-                </form>
-
-                
+                </form> 
             </div>
-
-            
-
 
         </div>
     </div>
