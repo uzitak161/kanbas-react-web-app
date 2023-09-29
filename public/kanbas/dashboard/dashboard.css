@@ -14,3 +14,17 @@
     margin-bottom: 30px;
     margin-left: 30px;
 }
+
+.card-title {
+    color: blue;
+    
+}
+
+.card-text {
+    color: darkgray;
+    margin-bottom: 0px;
+}
+
+.wd-secondary-card-text {
+    font-size: 12px;
+}

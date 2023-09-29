@@ -110,5 +110,10 @@
     margin-left: 10px;
 }
 
+.wd-module-link {
+    text-decoration: none;
+    color: red;
+}
+
 
 
