@@ -43,6 +43,42 @@
     margin-top: 15px;
 }
 
+.wd-module > .list-group-item a{
+    text-decoration: none;
+}
+
+.wd-module > .list-group-item {
+    text-decoration: none;
+    padding: 15px;
+}
+
+.wd-module {
+    border-radius: 0px;
+    margin-bottom: 30px;
+}
+
+.wd-color-green {
+    color: green;
+}
+
+.wd-vertical-ellipsis {
+    margin-left: 10px;
+}
+
+.wd-profile-summary a {
+    text-decoration: None;
+}
+
+.wd-top-home-button {
+    margin-left: 5px;
+    height: 40px;
+    text-align: center;
+}
+
+.wd-top-home-button-group {
+    display: flex;
+    flex-direction: row;
+}
 
 
 
