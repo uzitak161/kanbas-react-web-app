@@ -1,9 +1,9 @@
 
 .wd-course-navigator {
     margin-left: 30px;
-    margin-top: 60px;
+    margin-top: 30px;
     /* Need to figure out a way around this margin fix */
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .wd-course-navigator .list-group-item {
@@ -36,6 +36,11 @@
 
 .wd-navigation-option.active {
     background-color: white;
+}
+
+.wd-main-body {
+    margin-left: 100px;
+    margin-top: 15px;
 }
 
 

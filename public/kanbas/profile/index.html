@@ -14,7 +14,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-1 wd-navigation-bar position-absolute">
+            <div class="col-1 wd-navigation-bar position-absolute position-fixed">
                 <img class="wd-NU-logo" src="../NU-logo.jpg" />
                 <ul>
                     <li class="list-group-item wd-navigation-option active">
@@ -74,57 +74,73 @@
                 </ul>
             </div>
 
-            <div class="col-2 wd-course-navigator position-relative">
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="#">Notifications</a></li>
-                    <li class="list-group-item active"><a href="index.html">Profile</a></li>
-                    <li class="list-group-item"><a href="#">Files</a></li>
-                    <li class="list-group-item"><a href="#">Settings</a></li>
-                    <li class="list-group-item"><a href="#">ePortfolios</a></li>
-                    <li class="list-group-item"><a href="#">Shared Content</a></li>
-                    <li class="list-group-item"><a href="#">The Hub</a></li>
-                    <li class="list-group-item"><a href="#">Qwickly Course Tools</a></li>
-                    <li class="list-group-item"><a href="#">Global Announcements</a></li>
-                </ul>
 
-            </div>
 
-            <div class="col-8 wd-profile-summary">
+            <div class="col-9 wd-profile-summary wd-main-body" style="flex-direction: row;">
 
-                <h5>Uzay Takil's Profile</h5>
-                <hr />
+                <div class="row">
 
-                <div class="mb-3 wd-profile-summary float-end wd-edit-button" style="position: relative;">
-                    <a href="edit.html">
-                        <button class="btn btn-light btn-outline-dark text-nowrap" type="button" id="edit-profile">
-                            <i class="fa fa-pencil" aria-hidden="true"></i> Cancel Editing
-                        </button>
-                    </a>
+
+
+                    <h3>Uzay Takil's Profile</h3>
+                    <hr />
+
+                    <div class="col-2 wd-course-navigator" style="flex-direction: row;">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Notifications</a></li>
+                            <li class="list-group-item active"><a href="index.html">Profile</a></li>
+                            <li class="list-group-item"><a href="#">Files</a></li>
+                            <li class="list-group-item"><a href="#">Settings</a></li>
+                            <li class="list-group-item"><a href="#">ePortfolios</a></li>
+                            <li class="list-group-item"><a href="#">Shared Content</a></li>
+                            <li class="list-group-item"><a href="#">The Hub</a></li>
+                            <li class="list-group-item"><a href="#">Qwickly Course Tools</a></li>
+                            <li class="list-group-item"><a href="#">Global Announcements</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-5">
+                        
+                        <i class="fa fa-user" aria-hidden="true" style="font-size: 10em"></i>
+                        <br />
+                        <h2>Uzay Takil <i>(He/Him)</i></h2>
+
+                        <br />
+
+                        <h3>Contact</h3>
+                        <p>
+                            No registered services, you can add some on the settings page
+                        </p>
+
+                        <h3>Biography</h3>
+                        <p>
+                            Student, Software Engineer (soon to be), video games and technology enthusiast.
+                        </p>
+
+                        <h3>Links</h3>
+                        <p>
+                            <a href="#">
+                                <i class="fa-solid fa-link" style="color: black"></i>
+                                YouTube <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3 wd-profile-summary float-end wd-edit-button">
+                            <a href="edit.html">
+                                <button class="btn btn-light btn-outline-dark text-nowrap" type="button"
+                                    id="edit-profile">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> Cancel Editing
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    
                 </div>
 
-                <i class="fa fa-user" aria-hidden="true" style="font-size: 10em"></i>
-                <br />
-                <h2>Uzay Takil <i>(He/Him)</i></h2>
-
-                <br />
-
-                <h3>Contact</h3>
-                <p>
-                    No registered services, you can add some on the settings page
-                </p>
-
-                <h3>Biography</h3>
-                <p>
-                    Student, Software Engineer (soon to be), video games and technology enthusiast.
-                </p>
-
-                <h3>Links</h3>
-                <p>
-                    <a href="#">
-                        <i class="fa-solid fa-link" style="color: black"></i>
-                        YouTube <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </p>
 
             </div>
 
