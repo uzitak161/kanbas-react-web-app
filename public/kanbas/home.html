@@ -13,7 +13,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-1 wd-navigation-bar position-absolute position-fixed">
+            <div class="col-1 wd-navigation-bar position-absolute position-fixed d-none d-md-block">
                 <img class="wd-NU-logo" src="NU-logo.jpg" />
                 <ul>
                     <li class="list-group-item wd-navigation-option">
@@ -87,7 +87,7 @@
                     </nav>
                     <hr />
 
-                    <div class="col-2 wd-course-navigator position-relative">
+                    <div class="col-2 wd-course-navigator position-relative d-none d-md-block">
                         <ul class="list-group">
                             <li class="list-group-item active"><a href="home.html">Home</a></li>
                             <li class="list-group-item"><a href="#">Modules</a></li>
@@ -130,8 +130,7 @@
                             <div class="dropdown">
                                 <button class="btn btn-light btn-outline-dark dropdown-toggle btn-sm wd-top-home-button"
                                     type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <!-- <i class="fa-regular fa-circle-check wd-color-green"></i> Publish All -->
-                                    Publish All
+                                    <i class="fa-regular fa-circle-check wd-color-green"></i> Publish All
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -270,7 +269,7 @@
 
                     </div>
 
-                    <div class="col">
+                    <div class="col d-none d-xxl-block">
                         <h5>Course Status</h5>
                         <button class="btn btn-light btn-outline-dark text-nowrap btn-sm" type="button">Unpublish</button>
                         <button class="btn btn-light btn-outline-dark text-nowrap btn-sm" type="button">Published</button>
