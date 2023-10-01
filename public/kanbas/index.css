@@ -79,7 +79,10 @@
     color: red;
 }
 
-
+.breadcrumb a {
+    color: red;
+    text-decoration: none;
+}
 
 
 html *

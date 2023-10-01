@@ -116,7 +116,26 @@
 }
 
 
+.wd-flex-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
+.wd-centered-table-col {
+    text-align: center;
+}
 
+.wd-centered-table-col > tr > td:first-child {
+    color: red;
+    text-align: left;
+}
+
+.wd-centered-table-col td > input {
+    text-align: center;
+}
+
+.wd-centered-table-head tr > th:not(:first-child) {
+    text-align: center;
+}
 
 
