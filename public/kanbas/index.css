@@ -79,4 +79,10 @@
     color: red;
 }
 
-  
+
+
+
+html *
+{
+   font-family: Arial;
+}

@@ -4,8 +4,8 @@
 
 
 .wd-assignment-btn-grp {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -22,7 +22,7 @@
     width: 100px;
 }
 
-.wd-assignment-name > p {
+.wd-assignment-name>p {
     color: grey;
     font-size: small;
     margin-bottom: 0px;
@@ -41,4 +41,47 @@
     font-weight: bold;
     text-decoration: none;
     color: black;
-  }
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.wd-width-75px {
+    width: 75px;
+}
+
+.wd-ass-edit-label-margins {
+    width: 200px;
+    text-align: right;
+}
+
+.wd-ass-edit-label-margins label {
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.wd-ass-group-label-margins {
+    margin-left: 70px;
+    margin-right: 10px;
+    padding-right: 20px;
+}
+
+.form-check {
+    margin-left: 200px;
+}
+

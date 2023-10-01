@@ -4,155 +4,245 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <link href="../home.css" rel="stylesheet" />
+    <link href="assignments.css" rel="stylesheet" />
 </head>
 
 <body>
+    <div class="container-fluid">
 
-    <table border="0" width="100%">
-        <tr valign="baseline">
-            <td>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary d-md-none" style="background-color: black;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row d-none d-sm-block">
+            <div class="col-1 wd-navigation-bar position-absolute position-fixed d-none d-md-block sticky-top">
+                <img class="wd-NU-logo" src="../NU-logo.jpg" />
                 <ul>
-                    <li><a href="../profile/profile-nav.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../home-nav.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li class="list-group-item wd-navigation-option">
+                        <a href="../profile/profile-nav.html">
+                            <i class="fas fa-user wd-red-icon" style="font-size: 2em"></i>
+                            <span>Account</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="../dashboard/index.html">
+                            <i class="fas fa-tachometer-alt wd-red-icon" style="font-size: 1.75em"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option active">
+                        <a href="../home-nav.html">
+                            <i class="fas fa-book wd-red-icon" style="font-size: 2em"></i>
+                            <span>Courses</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fa fa-calendar wd-red-icon" style="font-size: 2em"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fas fa-inbox wd-red-icon" style="font-size: 2em"></i>
+                            <span>Inbox</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fas fa-history wd-red-icon" style="font-size: 2em"></i>
+                            <span>History</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fas fa-photo-video wd-red-icon" style="font-size: 2em"></i>
+                            <span>Inbox</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fas fa-arrow-circle-right wd-red-icon" style="font-size: 2em"></i>
+                            <span>Commons</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="far fa-question-circle wd-red-icon" style="font-size: 2em"></i>
+                            <span>Commons</span>
+                        </a>
+                    </li>
                 </ul>
-            </td>
-
-            <td>
-                <ul>
-                    <li><a href="../home.html">Home</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="index.html">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href="../grades.html">Grades</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-            </td>
-
-            <td>
-
-                <form>
-                    <select>
-                        <option value="SpeedGrader">SpeedGrader</option>
-                    </select>
-
-                    <hr>
-
-                    <h3>Assignment Name</h3>
-
-                    <input value="A1 - ENV + HTML" placeholder="Assignment 1" /><br />
-                    <br />
-                    <textarea cols="30" rows="2">This is the assignment description.</textarea><br />
-                    <br />
-                    <label for="points-input">Points</label><br />
-                    <input type="number" id="points-input" value="100"><br />
-                    <br />
-
-                    <label>Assignment Group</label><br />
-                    <select>
-                        <option>ASSIGNMENTS</option>
-                    </select>
-                    <br />
-                    <br />
-
-                    <label>Display Grade as</label><br />
-                    <select>
-                        <option>Percentage</option>
-                    </select>
-                </form>
-                <br />
-                <br />
-
-                <form id="edit-assignment-form">
-                    <label for="sub-type">Submission Type</label><br />
-                    <select id="sub-type">
-                        <option>Online</option>
-                    </select><br />
-                    <br />
-
-                    <label>Online Entry Options</label><br />
-                    <input type="checkbox" value="text-entry" name="check-entry-option" id="text-entry-check">
-                    <label for="text-entry-check">Text Entry</label><br />
-                    <input type="checkbox" value="web-url" name="check-entry-option" id="web-url-check">
-                    <label for="web-url-check">Website URL</label><br />
-                    <input type="checkbox" value="media-recordings" name="check-entry-option" id="media-rec-check">
-                    <label for="media-rec-check">Media Recordings</label><br />
-                    <input type="checkbox" value="student-annotation" name="check-entry-option" id="stud-anno-check">
-                    <label for="stud-anno-check">Student Annotation</label><br />
-                    <input type="checkbox" value="file-uploads" name="check-entry-option" id="file-uploads-check">
-                    <label for="file-uploads-check">File Uploads</label>
-
-                    <br />
-                    <br />
-
-                    <label>Submission Attempts</label><br />
-                    <select id="sub-attempts">
-                        <option>Unlimited</option>
-                    </select><br />
-                    <br />
-
-                    <label>Plagarism Review</label><br />
-                    <select id="plagarism-review">
-                        <option>None</option>
-                    </select><br />
-                    <br />
-
-                    <label for="grp-assignment-check">Group Assignment</label><br />
-                    <input type="checkbox" value="group-assignment" name="grp-assignment-checklist"
-                        id="grp-assignment-check">
-                    <label for="grp-assignment-check">This is a group assignment</label><br />
-                    <br />
-
-                    <label for="peer-review-check">Peer Reviews</label><br />
-                    <input type="checkbox" value="peer-review" name="peer-review-checklist" id="peer-review-check">
-                    <label for="peer-review-check">Require Peer Reviews</label><br />
-                    <br />
-
-                    Assign<br />
-                    <label for="assign-inpt">Assign to</label><br />
-                    <input type="text" id="assign-input" value="Everyone"><br />
-                    <br />
-
-                    <label for="Due-date-pick">Due</label><br />
-                    <input type="date" id="due-date" value="2021-01-01"><br />
-                    <br />
-
-                    <label for="available-date-pick">Available from</label><br />
-                    <input type="date" id="available-date" value="2021-01-01"><br />
-                    <br />
-
-                    <label for="until-date-pick">Until</label><br />
-                    <input type="date" id="until-date" value="2021-01-01"><br />
-                    <br />
-
-                    <a href="index.html"><button type="button" id="cancel-btn">Cancel</button></a>
-                    <a href="index.html"><button type="button" id="save-btn">Save</button></a>
+            </div>
 
 
-                </form>
-            </td>
 
-        </tr>
-    </table>
+            <div class="col-11 wd-main-body">
 
+                <div class="row">
+
+                    <div class="d-none d-md-block">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="../home.html">CS4550.12631.202410</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">Assignments</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">A1 - ENV</li>
+                            </ol>
+                        </nav>
+                        <hr />
+                    </div>
+
+
+                    <div class="col-2 wd-course-navigator position-relative d-none d-md-block">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="../home.html">Home</a></li>
+                            <li class="list-group-item"><a href="#">Modules</a></li>
+                            <li class="list-group-item"><a href="#">Piazza</a></li>
+                            <li class="list-group-item"><a href="#">Zoom Meetings</a></li>
+                            <li class="list-group-item active"><a href="assignments/index.html">Assignments</a></li>
+                            <li class="list-group-item"><a href="#">Quizzes</a></li>
+                            <li class="list-group-item"><a href="../grades.html">Grades</a></li>
+                            <li class="list-group-item"><a href="#">People</a></li>
+                            <li class="list-group-item"><a href="#">Panopto Video</a></li>
+                            <li class="list-group-item"><a href="#">Discussions</a></li>
+                            <li class="list-group-item"><a href="#">Announcements</a></li>
+                            <li class="list-group-item"><a href="#">Pages</a></li>
+                            <li class="list-group-item"><a href="#">Files</a></li>
+                            <li class="list-group-item"><a href="#">Rubrics</a></li>
+                            <li class="list-group-item"><a href="#">Outcomes</a></li>
+                            <li class="list-group-item"><a href="#">Collaborations</a></li>
+                            <li class="list-group-item"><a href="#">Syllabus</a></li>
+                            <li class="list-group-item"><a href="#">Settings</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-9">
+
+                        <div class="mb-3 wd-profile-summary float-end wd-top-home-button-group">
+                            <div style="margin-right: 10px">
+                                <i class="fa-regular fa-circle-check wd-color-green"></i>Published
+                            </div>
+                            <button class="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
+                                type="button">
+                                <i class="fa-solid fa-ellipsis-vertical wd-vertical-ellipsis"
+                                    style="margin-left: 0px;"></i>
+                            </button>
+
+                        </div>
+                        <br />
+                        <br />
+                        <hr />
+                        <form>
+                            <div class="wd-edit-form">
+                                <label for="ass-name-input">
+                                    <h6>Assignment Name</h6>
+                                </label>
+                                <input class="form-control inputlg" id="ass-name-input" value="A1 - ENV + HTML" /> <br />
+                                <textarea class="form-control"
+                                    rows="6">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.
+                                </textarea><br />
+
+
+                                <div class="wd-flex-row-container w-75">
+                                    <div class="wd-width-75px wd-ass-edit-label-margins">
+                                        <label for="points-inpt">
+                                            <h6>Points</h6>
+                                        </label>
+                                    </div>
+
+                                    <div class="wd-flex-grow-1">
+                                        <input class="form-control inputlg" id="points-inpt" value="A1 - ENV + HTML" /> <br />
+                                    </div>
+                                </div>
+
+                                <div class="wd-flex-row-container w-75">
+                                    <div class="wd-width-75px wd-ass-edit-label-margins">
+                                        <label class="" for="ass-group-select">
+                                            <h6>Assignment Group</h6>
+                                        </label>
+                                    </div>
+
+                                    <div class="wd-flex-grow-1">
+                                        <select class="form-select" id="ass-group-select">
+                                            <option selected value="Assignments">ASSIGNMENTS</option>
+                                            <option value="Op1">Option1</option>
+                                            <option value="Op2">Option2</option>
+                                        </select><br />
+                                    </div>
+                                </div>
+
+                                <div class="wd-flex-row-container w-75">
+                                    <div class="wd-width-75px wd-ass-edit-label-margins">
+                                        <label class="" for="display-select">
+                                            <h6>Display Grade as</h6>
+                                        </label>
+                                    </div>
+
+                                    <div class="wd-flex-grow-1">
+                                        <select class="form-select" id="display-select">
+                                            <option selected value="Assignments">Percentage</option>
+                                            <option value="Op1">Option1</option>
+                                            <option value="Op2">Option2</option>
+                                        </select><br />
+                                    </div>
+                                </div>
+
+
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                           type="checkbox" id="r6"/>
+                                      <label class="form-check-label" for="r6">
+                                        Example checkbox</label>
+                                  </div>
+                             
+                                
+
+                            </div>
+                        </form>
+
+                        
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    </div>
 </body>
 
 </html>
