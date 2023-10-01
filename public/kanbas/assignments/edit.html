@@ -160,36 +160,37 @@
                         <br />
                         <hr />
                         <form>
-                            <div class="wd-edit-form">
+                            <div class="container">
                                 <label for="ass-name-input">
                                     <h6>Assignment Name</h6>
                                 </label>
-                                <input class="form-control inputlg" id="ass-name-input" value="A1 - ENV + HTML" /> <br />
-                                <textarea class="form-control"
-                                    rows="6">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.
+                                <input class="form-control inputlg" id="ass-name-input" value="A1 - ENV + HTML" />
+                                <br />
+                                <textarea class="form-control" rows="6">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.
                                 </textarea><br />
 
 
-                                <div class="wd-flex-row-container w-75">
-                                    <div class="wd-width-75px wd-ass-edit-label-margins">
-                                        <label for="points-inpt">
+                                <div class="row">
+                                    <div class="wd-width-75px col-2 wd-ass-edit-label-margins">
+                                        <label for="points-inpt" class="mt-2">
                                             <h6>Points</h6>
                                         </label>
                                     </div>
 
-                                    <div class="wd-flex-grow-1">
-                                        <input class="form-control inputlg" id="points-inpt" value="A1 - ENV + HTML" /> <br />
+                                    <div class="col-10 w-50">
+                                        <input class="form-control inputlg" id="points-inpt" value="A1 - ENV + HTML" />
+                                        <br />
                                     </div>
                                 </div>
 
-                                <div class="wd-flex-row-container w-75">
-                                    <div class="wd-width-75px wd-ass-edit-label-margins">
-                                        <label class="" for="ass-group-select">
+                                <div class="row">
+                                    <div class="wd-width-75px col-2 wd-ass-edit-label-margins">
+                                        <label for="points-inpt" class="mt-2">
                                             <h6>Assignment Group</h6>
                                         </label>
                                     </div>
 
-                                    <div class="wd-flex-grow-1">
+                                    <div class="col-10 w-50">
                                         <select class="form-select" id="ass-group-select">
                                             <option selected value="Assignments">ASSIGNMENTS</option>
                                             <option value="Op1">Option1</option>
@@ -198,14 +199,18 @@
                                     </div>
                                 </div>
 
-                                <div class="wd-flex-row-container w-75">
-                                    <div class="wd-width-75px wd-ass-edit-label-margins">
-                                        <label class="" for="display-select">
-                                            <h6>Display Grade as</h6>
+
+
+
+
+                                <div class="row">
+                                    <div class="wd-width-75px col-2 wd-ass-edit-label-margins">
+                                        <label for="points-inpt" class="mt-2">
+                                            <h6>Dsiplay Grade as</h6>
                                         </label>
                                     </div>
 
-                                    <div class="wd-flex-grow-1">
+                                    <div class="col-10 w-50">
                                         <select class="form-select" id="display-select">
                                             <option selected value="Assignments">Percentage</option>
                                             <option value="Op1">Option1</option>
@@ -215,19 +220,131 @@
                                 </div>
 
 
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox" id="r6"/>
-                                      <label class="form-check-label" for="r6">
-                                        Example checkbox</label>
-                                  </div>
-                             
-                                
+
+
+
+
+
+                                <div class="row">
+                                    <div class="wd-width-75px col-2"></div>
+
+                                    <div class="form-check col-10 w-50">
+                                        <input class="form-check-input" type="checkbox" id="r6" />
+                                        <label class="form-check-label" for="r6">
+                                            Do not count this assignment towards the final grade</label>
+                                    </div>
+                                </div>
+
+                                <br />
+                                <br />
+
+
+                                <div class="row">
+                                    <div class="wd-width-75px col-2 wd-ass-edit-label-margins">
+                                        <label for="points-inpt" class="mt-2">
+                                            <h6>Submission Type</h6>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-10 border border-secondary rounded w-50">
+                                        <select class="form-select my-3 " id="sub-type-drop">
+                                            <option selected value="Assignments">Online</option>
+                                            <option value="Op1">Option1</option>
+                                            <option value="Op2">Option2</option>
+                                        </select>
+
+                                        <h6 class="wd-thick">Online Entry Options</h6>
+
+
+                                        <div class="my-3">
+                                            <input class="form-check-input" type="checkbox" id="r6" />
+                                            <label class="form-check-label" for="r6">
+                                                Text Entry</label>
+                                        </div>
+
+
+                                        <div class="my-3">
+                                            <input class="form-check-input" type="checkbox" id="r6" />
+                                            <label class="form-check-label" for="r6">
+                                                Website URL</label>
+                                        </div>
+
+                                        <div class="my-3">
+                                            <input class="form-check-input" type="checkbox" id="r6" />
+                                            <label class="form-check-label" for="r6">
+                                                Media Recordings</label>
+                                        </div>
+
+                                        <div class="my-3">
+                                            <input class="form-check-input" type="checkbox" id="r6" />
+                                            <label class="form-check-label" for="r6">
+                                                Student Annotation</label>
+                                        </div>
+
+                                        <div class="my-3">
+                                            <input class="form-check-input" type="checkbox" id="r6" />
+                                            <label class="form-check-label" for="r6">
+                                                File Uploads</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <br />
+                                <br />
+
+
+                                <div class="row">
+                                    <div class="wd-width-75px col-2 wd-ass-edit-label-margins">
+                                        <label for="points-inpt" class="mt-2">
+                                            <h6>Assign</h6>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-10 border border-secondary rounded w-50">
+                                        <label class="form-check-label mt-3" for="assign-type-drop">Assign To</label>
+                                        <select class="form-select my-3 " id="assign-type-drop">
+                                            <option selected value="Assignments">Online</option>
+                                            <option value="Op1">Option1</option>
+                                            <option value="Op2">Option2</option>
+                                        </select>
+
+                                        <label class="form-check-label mt-3" for="due-date-picker">Due</label><br />
+                                        <input type="date" id="due-date-picker" name="due-date-picker"
+                                            class="form-control" value="2021-09-01" /><br />
+
+                                        <div class="row">
+                                            <div class="col-6" style="text-align: left;">
+                                                <label class="form-check-label" for="available-date-picker">Available
+                                                    from</label>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-check-label" for="until-date-picker">Until</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6" style="text-align: left;">
+                                                <input type="date" id="available-date-picker"
+                                                    name="available-date-picker" class="form-control"
+                                                    value="2021-09-01" /><br />
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="date" id="until-date-picker" name="until-date-picker"
+                                                    class="form-control" value="2021-09-01" /><br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
 
                             </div>
                         </form>
 
-                        
+
                     </div>
 
 
