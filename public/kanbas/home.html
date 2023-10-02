@@ -11,19 +11,107 @@
         crossorigin="anonymous"></script>
     <link href="index.css" rel="stylesheet" />
     <link href="home.css" rel="stylesheet" />
+    <link href="home-tabs/side-tabs.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="container-fluid">
 
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-body-tertiary d-md-none">
-            <a href="home-tabs/nav-side-tab.html" class="navbar-brand" href="#">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </a>
-        </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggle" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#course-toggle" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+            <div class="collapse navbar-collapse navbar-light bg-light" id="nav-toggle">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 wd-drop-bar">
+                    <li class="wd-side-list-div my-4 wd-drop-option">
+                            <a href="profile/profile-nav.html">
+                                <i class="fas fa-user wd-red-icon" style="font-size: 2em"></i>
+                                <span>Account</span>
+                            </a>
+                        
+                    </li>
+                    <li class="wd-side-list-div my-4">
+                        <a href="dashboard/index.html">
+                            <i class="fas fa-tachometer-alt wd-red-icon" style="font-size: 1.75em"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="wd-side-list-div my-4">
+                        <a href="home-nav.html">
+                            <i class="fas fa-book wd-red-icon" style="font-size: 2em"></i>
+                            <span>Courses</span>
+                        </a>
+                    </li>
+                    <li class="wd-side-list-div my-4">
+                        <a href="#">
+                            <i class="fa fa-calendar wd-red-icon" style="font-size: 2em"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="wd-side-list-div my-4">
+                        <a href="#">
+                            <i class="fas fa-inbox wd-red-icon" style="font-size: 2em"></i>
+                            <span>Inbox</span>
+                        </a>
+                    </li>
+                    <li class="wd-side-list-div my-4">
+                        <a href="#">
+                            <i class="fas fa-history wd-red-icon" style="font-size: 2em"></i>
+                            <span>History</span>
+                        </a>
+                    </li>
+                    <li class="wd-side-list-div my-4">
+                        <a href="#">
+                            <i class="fas fa-photo-video wd-red-icon" style="font-size: 2em"></i>
+                            <span>Inbox</span>
+                        </a>
+                    </li>
+                    <li class="wd-side-list-div my-4">
+                        <a href="#">
+                            <i class="fas fa-arrow-circle-right wd-red-icon" style="font-size: 2em"></i>
+                            <span>Commons</span>
+                        </a>
+                    </li>
+                    <li class="wd-side-list-div my-4">
+                        <a href="#">
+                            <i class="far fa-question-circle wd-red-icon" style="font-size: 2em"></i>
+                            <span>Commons</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="collapse navbar-collapse navbar-light bg-light wd-course-drop-navigator" id="course-toggle">
+
+                <ul class="list-group">
+                    <li class="list-group-item active"><a href="home.html">Home</a></li>
+                    <li class="list-group-item"><a href="#">Modules</a></li>
+                    <li class="list-group-item"><a href="#">Piazza</a></li>
+                    <li class="list-group-item"><a href="#">Zoom Meetings</a></li>
+                    <li class="list-group-item"><a href="assignments/index.html">Assignments</a></li>
+                    <li class="list-group-item"><a href="#">Quizzes</a></li>
+                    <li class="list-group-item"><a href="grades.html">Grades</a></li>
+                    <li class="list-group-item"><a href="#">People</a></li>
+                    <li class="list-group-item"><a href="#">Panopto Video</a></li>
+                    <li class="list-group-item"><a href="#">Discussions</a></li>
+                    <li class="list-group-item"><a href="#">Announcements</a></li>
+                    <li class="list-group-item"><a href="#">Pages</a></li>
+                    <li class="list-group-item"><a href="#">Files</a></li>
+                    <li class="list-group-item"><a href="#">Rubrics</a></li>
+                    <li class="list-group-item"><a href="#">Outcomes</a></li>
+                    <li class="list-group-item"><a href="#">Collaborations</a></li>
+                    <li class="list-group-item"><a href="#">Syllabus</a></li>
+                    <li class="list-group-item"><a href="#">Settings</a></li>
+                </ul>
+
+            </div>
+          </nav>
 
         <div class="row d-none d-sm-block">
             <div class="col-1 wd-navigation-bar position-absolute position-fixed d-none d-md-block sticky-top">
