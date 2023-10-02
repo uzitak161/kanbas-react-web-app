@@ -1,0 +1,50 @@
+.wd-drop-option { 
+    padding: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.wd-drop-bar a {
+    text-decoration: none
+}
+
+.wd-side-list-div a {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    color: black;
+}
+
+.wd-side-list-div i {
+    margin-right: 10px;
+}
+
+.wd-course-drop-navigator {
+    margin: 0px;
+}
+
+.wd-course-drop-navigator .list-group-item {
+    border: none;
+    color: red;
+    padding-left: 8px;
+}
+
+.wd-course-drop-navigator .list-group-item a {
+    color: red;
+    text-decoration: none;
+}
+
+.wd-course-drop-navigator .list-group {
+    border-radius: 0px;
+}
+
+.wd-course-drop-navigator .list-group-item.active {
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+.wd-course-drop-navigator .list-group-item.active a {
+    color: black;
+}
