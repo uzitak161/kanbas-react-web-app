@@ -1,0 +1,41 @@
+.wd-navigation-bar {
+    width: 84px;
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    align-items: center;
+    display: block;
+    
+}
+
+.wd-navigation-bar i {
+    color: red;
+}
+
+.wd-navigation-bar ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.wd-navigation-bar {
+    text-decoration: none;
+}
+
+.wd-navigation-bar a {
+    text-decoration: none
+}
+
+.wd-navigation-option {
+    text-decoration: none;
+}
+
+.wd-side-list-div a {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    color: black;
+}
+
+.wd-side-list-div i {
+    margin-right: 10px;
+}
