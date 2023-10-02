@@ -15,6 +15,10 @@
     margin-left: 30px;
 }
 
+.card a {
+    text-decoration: none;
+}
+
 .card-title {
     color: blue;
     
