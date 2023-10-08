@@ -95,3 +95,7 @@ html *
 {
    font-family: Arial;
 }
+
+.wd-white-icon {
+    color: white;
+}
