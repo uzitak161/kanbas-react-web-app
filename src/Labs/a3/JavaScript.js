@@ -1,5 +1,10 @@
 import VariablesAndConstants from "./VariablesAndConstants";
 import VariableTypes from "./VariableTypes";
+import BooleanVariables from "./BooleanVariables";
+import IfElse from "./IfElse";
+import TernaryOperator from "./TernaryOperator";
+import WorkingWithFunctions from "./WorkingWithFunctions";
+import WorkingWithArrays from "./WorkingWithArrays";
 
 function JavaScript() {
     console.log("Hello World!");
@@ -8,6 +13,11 @@ function JavaScript() {
           <h1>JavaScript</h1>
           <VariablesAndConstants/>
           <VariableTypes/>
+          <BooleanVariables/>
+          <IfElse/>
+          <TernaryOperator/>
+          <WorkingWithFunctions/>
+          <WorkingWithArrays/>
        </div>
     );
  }
