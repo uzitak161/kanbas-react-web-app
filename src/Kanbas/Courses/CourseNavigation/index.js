@@ -11,6 +11,7 @@ function CourseNavigation() {
         <Link
           key={index}
           to={`/Kanbas/Courses/${courseId}/${link}`}
+          style={{ borderRadius: "0px" }}
           className={`list-group-item wd-course-navigation-option ${pathname.includes(link) && "active"}`}>
           {link}
         </Link>

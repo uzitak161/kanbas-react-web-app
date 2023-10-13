@@ -7,7 +7,7 @@
 .wd-course-navigator .wd-course-navigation-option  {
     color: red;
     text-decoration: none;
-    /* border-radius: 0%; Come back to this */
+    /* border-radius: 0%; Managed by style within the CourseNavigation component */
 }
 
 .wd-course-navigator .wd-course-navigation-option.active  {
@@ -19,5 +19,14 @@
 
 .wd-course-navigator .list-group {
     border-radius: 0px;
+}
+
+.wd-breadcrumb-inactive {
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb-item {
+    text-decoration: none;
 }
 

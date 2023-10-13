@@ -26,8 +26,9 @@ function KanbasNavigation() {
                 <Link
                     key={index}
                     to={`/Kanbas/${link}`}
+                    style={{ borderRadius: "0px" }}
                     className={`list-group-item wd-navigation-bar-item ${pathname.includes(link) && "active"}`}
-                >
+                >   
                     {link_icon_map[link]}
                     {link}
                 </Link>
