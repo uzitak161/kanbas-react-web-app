@@ -1,16 +1,10 @@
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
-import './index.css';
-import RightSideBarButtons from "./RigeSideBarButtons";
-import TopButtons from "./TopButtons";
-import AllModules from "./AllModules"
+import '../Home/index.css';
+import TopButtons from "../Home/TopButtons";
+import AllModules from "../Home/AllModules";
 
-
-
-
-function Home() {
-
-
+function Modules() {
     const { courseId } = useParams();
     console.log(courseId === "RS101")
     const course = db.courses.find(
@@ -24,10 +18,10 @@ function Home() {
             <TopButtons />
             <AllModules courseId={courseId} />
             </div>
-            <RightSideBarButtons />
         </div>
 
     )
 }
 
-export default Home;
+
+export default Modules
