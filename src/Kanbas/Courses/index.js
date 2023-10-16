@@ -5,6 +5,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Breadcrumb from "./CourseNavigation/breadcrumb";
 import Modules from "./Modules"
+import Assignments from "./Assignments"
 
 function Courses() {
   const { courseId } = useParams();
@@ -26,7 +27,7 @@ function Courses() {
               <Route path="/" element={<Navigate to="Home" />} />
               <Route path="Home" element={<Home />} />
               <Route path="Modules" element={<Modules />} />
-              <Route path="Assignments" element={<h1>Assignments</h1>} />
+              <Route path="Assignments" element={<Assignments />} />
               <Route
                 path="Assignments/:assignmentId"
                 element={<h1>Assignment Editor</h1>}
