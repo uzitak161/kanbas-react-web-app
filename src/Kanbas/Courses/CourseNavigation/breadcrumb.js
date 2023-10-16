@@ -17,7 +17,7 @@ function GenerateBreadcrumb() {
             <Link
                 to={`/Kanbas/Courses/${courseId}/Assignments`}
                 style={{ textDecoration: "none", display: "flex", flexDirection: "row" }} className="mt-2">
-                <li className="breadcrumb-item"> <span className="wd-no-text-decorations"> &gt; </span>Assignments</li>
+                <li className="breadcrumb-item ps-2"> <span className="wd-no-text-decorations">  &gt; </span>Assignments</li>
             </Link>
         )
 
