@@ -7,12 +7,13 @@ function GenerateBreadcrumb() {
 
     // Make a regex pattern to match for a case like (path/Assignments/*)
     const pattern = /Assignments\/.*/;
+    const { pathname } = useLocation();
     const { courseId, assignmentId } = useParams();
     
-    const { pathname } = useLocation();
+    
     console.log(assignmentId)
     console.log(courseId)
-    console.log(pathname)
+    console.log(pathname + " hello world")
 
     if (pattern.test(pathname)) {
         return (

@@ -1,8 +1,11 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import db from "../../Database";
 import '../Home/index.css';
 import TopButtons from "../Home/TopButtons";
 import AllModules from "../Home/AllModules";
+import Breadcrumb from "../CourseNavigation/breadcrumb";
+import CourseNavigation from "../CourseNavigation";
+
 
 function Modules() {
     const { courseId } = useParams();
@@ -12,11 +15,25 @@ function Modules() {
 
 
     return (
-        <div style={{display: "flex" , flex: "row"}}>
-            
-            <div className="w-75">
-            <TopButtons />
-            <AllModules courseId={courseId} />
+        <div>
+            <Breadcrumb />
+            <div>
+                <CourseNavigation />
+                <div
+                    className="overflow-y-scroll position-fixed bottom-0 end-0"
+                    style={{
+                        left: "320px",
+                        top: "50px",
+                    }}
+                >
+                    <div style={{ display: "flex", flex: "row" }}>
+
+                        <div className="w-75">
+                            <TopButtons />
+                            <AllModules courseId={courseId} />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

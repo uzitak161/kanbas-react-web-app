@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "../Home/index.css";
 import "./index.css"
-import { AiOutlineSetting, AiOutlineFilter } from "react-icons/ai";
+import Breadcrumb from "../CourseNavigation/breadcrumb";
+import CourseNavigation from "../CourseNavigation";
 
 
 function Grades() {
@@ -20,18 +21,18 @@ function Grades() {
             <div>
                 <div className="">
                     <div className="my-3 wd-top-home-button-group wd-assignment-btn-grp">
-
-                        <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm ms-2"
-                            type="button">
-                            <i className="fas fa-file-import"></i> Import
-                        </button>
-
-                        <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm ms-2" type="button">
+                        <a href="#">
+                            <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
+                                type="button">
+                                <i className="fas fa-file-import"></i> Import
+                            </button>
+                        </a>
+                        <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm" type="button">
                             <i className="fas fa-file-export"></i> Export
                         </button>
-                        <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm ms-2"
+                        <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
                             type="button">
-                            <AiOutlineSetting className="pb-1"/>
+                            <i className="fas fa-cog"></i>
                         </button>
                     </div>
                 </div>
@@ -49,14 +50,14 @@ function Grades() {
                     <div className="row">
                         <div className="col-6" style={{ textalign: "left" }}>
                             {/* Taken from stackoverflow  https://stackoverflow.com/questions/19350291/use-font-awesome-icon-in-placeholder */}
-                            <input type="text" id="student-search" class="form-control" placeholder="Search Students" /><br />
+                            <input type="text" id="student-search" class="form-control" placeholder="&#xF002; Search Students" /><br />
                         </div>
                         <div class="col-6">
-                            <input type="text" id="student-search" class="form-control" placeholder="Search Students" /><br />
+                            <input type="text" id="ass-search" class="form-control" placeholder="&#xF002; Search Assignments" /><br />
                         </div>
                     </div>
 
-                    <button type="button" className="btn btn-light btn-outline-dark text-nowrap"><i class="fas fa-filter"></i> <AiOutlineFilter className="pb-1" />Apply
+                    <button type="button" className="btn btn-light btn-outline-dark text-nowrap"><i class="fas fa-filter"></i>Apply
                         Filters</button>
 
                 </form>
@@ -65,30 +66,44 @@ function Grades() {
     }
 
     return (
-        <div className="w-75">
-            <TopButtonGroup />
-            <div className="mt-3 table-responsive-xl">
-                <table className="table table-striped table-bordered">
-                    <thead className="wd-centered-table-head">
-                        <tr className="">
-                            <th className="text-center">Student Name</th>
-                            {assignments.map((assignment) => (<th>{assignment.title}</th>))}
-                        </tr>
-                    </thead>
-                    <tbody className="wd-centered-table-col text-center">
-                        {enrollments.map((enrollment) => {
-                            const user = db.users.find((user) => user._id === enrollment.user);
-                            return (
-                                <tr>
-                                    <td>{user.firstName} {user.lastName}</td>
-                                    {assignments.map((assignment) => {
-                                        const grade = db.grades.find(
-                                            (grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
-                                        return (<td>{grade?.grade || ""}</td>);
+        <div>
+            <Breadcrumb />
+            <div>
+                <CourseNavigation />
+                <div
+                    className="overflow-y-scroll position-fixed bottom-0 end-0"
+                    style={{
+                        left: "320px",
+                        top: "50px",
+                    }}
+                >
+                    <div className="w-75">
+                        <TopButtonGroup />
+                        <div className="mt-3 table-responsive-xl">
+                            <table className="table table-striped table-bordered">
+                                <thead>
+                                    <th >Student Name</th>
+                                    {assignments.map((assignment) => (<th>{assignment.title}</th>))}
+                                </thead>
+                                <tbody className="wd-centered-table-col">
+                                    {enrollments.map((enrollment) => {
+                                        const user = db.users.find((user) => user._id === enrollment.user);
+                                        return (
+                                            <tr>
+                                                <td>{user.firstName} {user.lastName}</td>
+                                                {assignments.map((assignment) => {
+                                                    const grade = db.grades.find(
+                                                        (grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
+                                                    return (<td>{grade?.grade || ""}</td>);
+                                                })}
+                                            </tr>);
                                     })}
-                                </tr>);
-                        })}
-                    </tbody></table>
-            </div></div>);
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>);
 }
 export default Grades;

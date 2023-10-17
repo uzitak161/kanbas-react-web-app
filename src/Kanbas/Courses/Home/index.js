@@ -4,6 +4,8 @@ import './index.css';
 import RightSideBarButtons from "./RigeSideBarButtons";
 import TopButtons from "./TopButtons";
 import AllModules from "./AllModules"
+import Breadcrumb from "../CourseNavigation/breadcrumb";
+import CourseNavigation from "../CourseNavigation";
 
 
 
@@ -18,13 +20,27 @@ function Home() {
 
 
     return (
-        <div style={{display: "flex" , flex: "row"}}>
-            
-            <div className="w-75">
-            <TopButtons />
-            <AllModules courseId={courseId} />
+        <div>
+            <Breadcrumb />
+            <div>
+                <CourseNavigation />
+                <div
+                    className="overflow-y-scroll position-fixed bottom-0 end-0"
+                    style={{
+                        left: "320px",
+                        top: "50px",
+                    }}
+                >
+                    <div style={{ display: "flex", flex: "row" }}>
+
+                        <div className="w-75">
+                            <TopButtons />
+                            <AllModules courseId={courseId} />
+                        </div>
+                        <RightSideBarButtons />
+                    </div>
+                </div>
             </div>
-            <RightSideBarButtons />
         </div>
 
     )
