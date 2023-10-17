@@ -1,16 +1,21 @@
 import React from "react";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate, useParams, Link, useLocation } from "react-router-dom";
 import db from "../../Database";
 import "./index.css"
 
 
 function AssignmentEditor() {
-  const { assignmentId } = useParams();
+  const { assignmentId, courseId } = useParams();
+
+  const pathname = useLocation();
+
   const assignment = db.assignments.find(
     (assignment) => assignment._id === assignmentId);
 
+  console.log(assignmentId)
+  console.log(pathname)
+  
 
-  const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");

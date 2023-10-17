@@ -2,22 +2,28 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import "./index.css"
 
 
+
 function GenerateBreadcrumb() {
 
     // Make a regex pattern to match for a case like (path/Assignments/*)
     const pattern = /Assignments\/.*/;
-    const { courseId } = useParams();
-
-
+    const { courseId, assignmentId } = useParams();
+    
     const { pathname } = useLocation();
+    console.log(assignmentId)
+    console.log(courseId)
+    console.log(pathname)
 
     if (pattern.test(pathname)) {
         return (
+            <div style={{display: "flex", flexDirection: "row" }}>
             <Link
                 to={`/Kanbas/Courses/${courseId}/Assignments`}
                 style={{ textDecoration: "none", display: "flex", flexDirection: "row" }} className="mt-2">
-                <li className="breadcrumb-item ps-2"> <span className="wd-no-text-decorations">  &gt; </span>Assignments</li>
+                <li className="breadcrumb-item ps-2"> <span className="wd-no-text-decorations">  &gt; </span>Assignments</li> 
             </Link>
+            <li className="breadcrumb-item ps-2 active mt-2"> <span className="wd-no-text-decorations">  &gt; </span>{assignmentId}</li> 
+            </div>
         )
 
     } else if (pathname.includes("Home")) {

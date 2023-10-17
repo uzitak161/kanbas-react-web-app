@@ -11,7 +11,7 @@ import Grades from "./Grades";
 function Courses() {
   return (
     <div style={{ marginLeft: 104 }} className="w-100">
-      <Breadcrumb />
+      {/* <Breadcrumb /> */}
       <div>
         <CourseNavigation />
         <div>
@@ -33,6 +33,7 @@ function Courses() {
               />
               <Route path="Grades" element={<Grades />} />
             </Routes>
+            <Breadcrumb />
           </div>
         </div>
       </div>
