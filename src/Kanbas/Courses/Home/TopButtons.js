@@ -1,25 +1,26 @@
 import './index.css';
+import { FaRegCheckCircle, FaEllipsisV } from 'react-icons/fa';
 
 function TopButtons() {
 
     return (
         <><div className="wd-profile-summary float-end wd-top-home-button-group d-inline-flex p-2">
-            <a href="#">
-                <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
-                    type="button">
-                    Collapse All
-                </button>
-            </a>
-            <a href="#">
-                <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
-                    type="button">
-                    View Progress
-                </button>
-            </a>
+
+            <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
+                type="button">
+                Collapse All
+            </button>
+
+
+            <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
+                type="button">
+                View Progress
+            </button>
+
             <div className="dropdown">
                 <button className="btn btn-light btn-outline-dark dropdown-toggle btn-sm wd-top-home-button"
                     type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i className="fa-regular fa-circle-check wd-color-green"></i> Publish All
+                    <i className="fa-regular fa-circle-check wd-color-green"></i> <FaRegCheckCircle className='pb-1 me-1 wd-color-green'/>Publish All
                 </button>
                 <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="#">Action</a></li>
@@ -28,10 +29,11 @@ function TopButtons() {
                 </ul>
             </div>
             <button className="btn btn-danger text-nowrap wd-top-home-button btn-sm" type="button">
-                <i className="fa-solid fa-plus"></i> Module
+                <i className="fa-solid fa-plus"></i>  + Module
             </button>
-            <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
+            <button className="wd-settings-button btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
                 type="button">
+                    <FaEllipsisV className="pe-2 pb-1" /> 
             </button>
 
         </div><br /><br /><hr /><br /></>

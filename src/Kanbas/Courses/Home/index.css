@@ -23,3 +23,25 @@
 .wd-assignment-btn-grp {
     justify-content: end;
 }
+
+.wd-top-home-button-group button {
+    margin-left: 15px;
+    width: 120px;
+}
+
+.wd-settings-button {
+    width: 24px !important;
+}
+
+.wd-color-green {
+    color: green;
+}
+
+.wd-todo-list > li{
+    color: red;
+}
+
+.wd-todo-list > li > p {
+    color: grey;
+    font-size: 12px;
+}

@@ -1,5 +1,6 @@
 import './index.css';
 import db from "../../Database";
+import { FaRegAddressBook, FaRegCheckCircle, FaEllipsisV, FaPlus } from 'react-icons/fa';
 
 function AllModules({ courseId }) {
     console.log(courseId.toString() === "RS101")
@@ -12,8 +13,9 @@ function AllModules({ courseId }) {
                         <div className="py-2">
                             {module.name}
                             <span className="float-end">
-                                <i className="fa-regular fa-circle-check wd-color-green"></i>
-                                <i className="fa-solid fa-ellipsis-vertical wd-vertical-ellipsis"></i>
+                                <FaRegCheckCircle className='wd-color-green' />
+                                <FaPlus className='ms-3' />
+                                <FaEllipsisV className='ms-3'/>
                             </span>
                         </div>
                     </li>

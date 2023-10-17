@@ -9,7 +9,7 @@ import CourseNavigation from "../CourseNavigation";
 
 function TopButtons() {
   return (
-    <div className="mb-3 wd-top-home-button-group wd-assignment-btn-grp mt-3">
+    <div className="mb-3 wd-assignment-btn-grp mt-3">
       <div className="wd-ass-search-input">
         <input className="form-control wd-ass-search" placeholder="Search for Assignment" />
       </div>
