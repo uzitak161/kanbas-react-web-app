@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
-import { FaUserAlt } from 'react-icons/fa';
+import { FaUserAlt, FaTachometerAlt, FaBook, FaCalendar, FaInbox, FaHistory, FaPhotoVideo, FaArrowCircleRight, FaQuestion } from 'react-icons/fa';
 
 
 function KanbasNavigation() {
@@ -8,19 +8,19 @@ function KanbasNavigation() {
 
     const link_icon_map = {
         "Account": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />,
-        "Dashboard": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />,
-        "Courses": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />,
-        "Calendar": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />,
-        "Inbox": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />,
-        "History": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />,
-        "Studio": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />,
-        "Commons": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />,
-        "Help": <FaUserAlt className="wd-nav-icon mb-2" size={"3em"} />
+        "Dashboard": <FaTachometerAlt className="wd-nav-icon mb-2" size={"3em"} />,
+        "Courses": <FaBook className="wd-nav-icon mb-2" size={"3em"} />,
+        "Calendar": <FaCalendar className="wd-nav-icon mb-2" size={"3em"} />,
+        "Inbox": <FaInbox className="wd-nav-icon mb-2" size={"3em"} />,
+        "History": <FaHistory className="wd-nav-icon mb-2" size={"3em"} />,
+        "Studio": <FaPhotoVideo className="wd-nav-icon mb-2" size={"3em"} />,
+        "Commons": <FaArrowCircleRight className="wd-nav-icon mb-2" size={"3em"} />,
+        "Help": <FaQuestion className="wd-nav-icon mb-2" size={"3em"} />
     }
     
     const { pathname } = useLocation();
     return (
-        <div className="list-group wd-navigation-bar position-absolute">
+        <div className="list-group wd-navigation-bar position-fixed overflow-auto">
             <img src={require('./NU-logo.jpg')} className="wd-NU-logo" alt="NU-logo" />
             {links.map((link, index) => (
                 <Link
