@@ -20,17 +20,15 @@ function Home() {
 
 
     return (
-        <div>
+        <div className="position-fixed">
             <Breadcrumb />
-            <div>
+            <div className="position-fixed">
                 <CourseNavigation />
-                <div
-                    className="overflow-y-scroll position-fixed bottom-0 end-0"
+                <div className="overflow-y-scroll position-fixed bottom-0 end-0"
                     style={{
                         left: "320px",
                         top: "50px",
-                    }}
-                >
+                    }}>
                     <div style={{ display: "flex", flex: "row" }}>
 
                         <div className="w-75">

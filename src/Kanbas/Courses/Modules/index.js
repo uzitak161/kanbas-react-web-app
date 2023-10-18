@@ -15,9 +15,9 @@ function Modules() {
 
 
     return (
-        <div>
+        <div className="position-fixed">
             <Breadcrumb />
-            <div>
+            <div className="position-fixed">
                 <CourseNavigation />
                 <div
                     className="overflow-y-scroll position-fixed bottom-0 end-0"

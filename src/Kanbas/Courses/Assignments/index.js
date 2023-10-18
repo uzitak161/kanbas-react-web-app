@@ -61,7 +61,7 @@ function Assignments() {
                   </span>
                   <span className="float-end">
                     <button className="btn btn-light btn-outline-dark btn-sm rounded-left rounded-right">40% of Total</button>
-                    <FaRegCheckCircle className="wd-assignment-icon" />
+                    <FaRegCheckCircle className="wd-assignment-icon ms-1" />
                     <FaEllipsisV className="wd-color-black ms-1" />
                   </span>
                 </div>

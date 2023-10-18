@@ -2,7 +2,7 @@ import './index.css';
 
 function RightSideBarButtons() {
     return (
-        <div class="float-end d-none d-xxl-block ms-3">
+        <div class="float-end d-none d-xl-block ms-3">
             <div className="w-75 ms-4">
                 <br />
 
