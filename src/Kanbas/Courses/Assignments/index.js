@@ -14,12 +14,10 @@ function TopButtons() {
         <input className="form-control wd-ass-search" placeholder="Search for Assignment" />
       </div>
       <div>
-        <a href="#">
-          <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
-            type="button">
-            <i className="fa-solid fa-plus"></i> Group
-          </button>
-        </a>
+        <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
+          type="button">
+          <i className="fa-solid fa-plus"></i> Group
+        </button>
         <button className="btn btn-danger text-nowrap wd-top-home-button btn-sm" type="button">
           <i className="fa-solid fa-plus"></i> Assignment
         </button>

@@ -51,7 +51,7 @@ function Home() {
                 <div style={{ display: "flex", flex: "row" }}>
 
                     <div className="w-75">
-                        <TopButtons style={{marginLeft: (100 + 'px')}}/>
+                        <TopButtons />
                         <AllModules courseId={courseId} />
                     </div>
                     <RightSideBarButtons />

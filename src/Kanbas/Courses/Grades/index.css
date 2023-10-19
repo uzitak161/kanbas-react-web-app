@@ -1,3 +1,7 @@
 .wd-assignment-btn-grp {
     justify-content: end;
 }
+
+.wd-centered-table-head tr > td:not(:first-child) {
+    text-align: center;
+}

@@ -4,6 +4,7 @@ import "../Home/index.css";
 import "./index.css"
 import Breadcrumb from "../CourseNavigation/breadcrumb";
 import CourseNavigation from "../CourseNavigation";
+import { FaFileImport, FaFileExport, FaCog, FaFilter } from "react-icons/fa";
 
 
 function Grades() {
@@ -21,18 +22,16 @@ function Grades() {
             <div>
                 <div className="">
                     <div className="my-3 wd-top-home-button-group wd-assignment-btn-grp">
-                        <a href="#">
                             <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
                                 type="button">
-                                <i className="fas fa-file-import"></i> Import
+                                <FaFileImport /> Import
                             </button>
-                        </a>
                         <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm" type="button">
-                            <i className="fas fa-file-export"></i> Export
+                            <FaFileExport /> Export
                         </button>
                         <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
                             type="button">
-                            <i className="fas fa-cog"></i>
+                            <FaCog />
                         </button>
                     </div>
                 </div>
@@ -49,16 +48,14 @@ function Grades() {
                     </div>
                     <div className="row">
                         <div className="col-6" style={{ textalign: "left" }}>
-                            {/* Taken from stackoverflow  https://stackoverflow.com/questions/19350291/use-font-awesome-icon-in-placeholder */}
-                            <input type="text" id="student-search" class="form-control" placeholder="&#xF002; Search Students" /><br />
+                            <input type="text" id="student-search" class="form-control" placeholder="Search Students" /><br />
                         </div>
                         <div class="col-6">
-                            <input type="text" id="ass-search" class="form-control" placeholder="&#xF002; Search Assignments" /><br />
+                            <input type="text" id="ass-search" class="form-control" placeholder="Search Assignments" /><br />
                         </div>
                     </div>
 
-                    <button type="button" className="btn btn-light btn-outline-dark text-nowrap"><i class="fas fa-filter"></i>Apply
-                        Filters</button>
+                    <button type="button" className="btn btn-light btn-outline-dark text-nowrap"><FaFilter /> Apply Filters</button>
 
                 </form>
             </div>
@@ -81,9 +78,11 @@ function Grades() {
                         <TopButtonGroup />
                         <div className="mt-3 table-responsive-xl">
                             <table className="table table-striped table-bordered">
-                                <thead>
-                                    <th >Student Name</th>
-                                    {assignments.map((assignment) => (<th>{assignment.title}</th>))}
+                                <thead className="wd-centered-table-head">
+                                    <tr>
+                                    <td><b>Student Name</b></td>
+                                    {assignments.map((assignment) => (<td>{assignment.title}</td>))}
+                                    </tr>
                                 </thead>
                                 <tbody className="wd-centered-table-col">
                                     {enrollments.map((enrollment) => {
