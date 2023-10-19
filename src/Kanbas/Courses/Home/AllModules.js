@@ -11,7 +11,7 @@ function AllModules({ courseId }) {
                 {modules.map((module, index) => (
                     <li key={index} className="list-group-item list-group-item-secondary my-5 border border-secondary rounded-0">
                         <div className="py-2">
-                            {module.name}
+                            {module.name} - {module.description}
                             <span className="float-end">
                                 <FaRegCheckCircle className='wd-color-green' />
                                 <FaPlus className='ms-3' />
