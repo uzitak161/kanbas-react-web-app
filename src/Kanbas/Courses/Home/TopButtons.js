@@ -4,15 +4,15 @@ import { FaRegCheckCircle, FaEllipsisV } from 'react-icons/fa';
 function TopButtons() {
 
     return (
-        <><div className="wd-profile-summary float-end wd-top-home-button-group d-inline-flex p-2">
+        <><div className="wd-profile-summary float-end wd-top-home-button-group p-2">
 
-            <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
+            <button className="btn btn-light btn-outline-dark text-nowrap btn-sm"
                 type="button">
                 Collapse All
             </button>
 
 
-            <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
+            <button className="btn btn-light btn-outline-dark text-nowrap btn-sm"
                 type="button">
                 View Progress
             </button>

@@ -45,7 +45,7 @@ function Breadcrumb() {
     const { courseId } = useParams();
 
     return (
-        <div className="w-100">
+        <div className="w-100 d-none d-md-block">
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
 
