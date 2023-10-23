@@ -1,0 +1,101 @@
+.wd-navigation-bar {
+    width: 84px;
+    background-color: black;
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    align-items: center;
+    display: block;
+    
+}
+
+.wd-navigation-bar ul {
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.wd-navigation-option { 
+    padding: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.wd-navigation-bar a {
+    text-decoration: none
+}
+
+.container-fluid {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+
+.wd-navigation-option a span {
+    color: white;
+    font-size: 14px;
+    margin: 5px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+
+
+.wd-red-icon {
+    color: red;
+    margin: 5px;
+}
+
+.wd-navigation-option {
+    /* width: 84px; */
+    height: 65px;
+    text-align: center;
+    display: block;
+    /*position: relative;*/
+}
+
+.wd-navigation-bar img {
+    height: auto;
+    /* width: 84px; */
+}
+
+.wd-NU-logo {
+    width: 84px;
+    height: auto;
+}
+
+.wd-navigation-option.active i {
+    color: red;
+    margin-top: -2px;
+}
+
+.wd-navigation-option.active a span {
+    color: red;
+}
+
+.wd-navigation-option.active {
+    background-color: white;
+}
+
+.wd-fake-link {
+    color: red;
+}
+
+.breadcrumb a {
+    color: red;
+    text-decoration: none;
+}
+
+
+
+html *
+{
+   font-family: Arial;
+}
+
+.wd-white-icon {
+    color: white;
+}

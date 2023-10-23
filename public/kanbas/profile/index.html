@@ -4,87 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../index.css" rel="stylesheet" />
+    <link href="../home.css" rel="stylesheet" />
+    <link href="profile.css" rel="stylesheet" />
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 wd-navigation-bar position-absolute position-fixed">
+                <img class="wd-NU-logo" src="../NU-logo.jpg" />
+                <ul>
+                    <li class="list-group-item wd-navigation-option active">
+                        <a href="profile-nav.html">
+                            <i class="fas fa-user wd-white-icon" style="font-size: 2em; color: grey;"></i>
+                            <span>Account</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="../dashboard/index.html">
+                            <i class="fas fa-tachometer-alt wd-red-icon" style="font-size: 1.75em"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="../home-nav.html">
+                            <i class="fas fa-book wd-red-icon" style="font-size: 2em"></i>
+                            <span>Courses</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fa fa-calendar wd-red-icon" style="font-size: 2em"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fas fa-inbox wd-red-icon" style="font-size: 2em"></i>
+                            <span>Inbox</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fas fa-history wd-red-icon" style="font-size: 2em"></i>
+                            <span>History</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fas fa-photo-video wd-red-icon" style="font-size: 2em"></i>
+                            <span>Inbox</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="fas fa-arrow-circle-right wd-red-icon" style="font-size: 2em"></i>
+                            <span>Commons</span>
+                        </a>
+                    </li>
+                    <li class="wd-navigation-option">
+                        <a href="#">
+                            <i class="far fa-question-circle wd-red-icon" style="font-size: 2em"></i>
+                            <span>Commons</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-    <table border="0" width="100%">
-        <tbody>
-            <tr valign="baseline">
-                <td>
-                    <ul>
-                        <li><a href="profile-nav.html">Account</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="../home-nav.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </td>
 
-                <td>
-                    <ul>
-                        <li><a href="#">Notifications</a></li>
-                        <li><a href="index.html">Profile</a></li>
-                        <li><a href="#">Files</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">ePortfolios</a></li>
-                        <li><a href="#">Shared Content</a></li>
-                        <li><a href="#">The Hub</a></li>
-                        <li><a href="#">Qwickly Course Tools</a></li>
-                        <li><a href="#">Global Announcements</a></li>
-                    </ul>
-                </td>
 
-                <td>
-                    <h4>Uzay Takil's Profile</h4>
+            <div class="col-9 wd-profile-summary wd-main-body" style="flex-direction: row;">
+
+                <div class="row">
+
+
+
+                    <h3>Uzay Takil's Profile</h3>
                     <hr />
-                    <table border="0" width="100%">
-                        <tbody>
-                            <tr valign="baseline">
-                                <td>
-                                    <h2>Uzay Takil</h2>
 
-                                    <h3>Contact</h3>
-                                    <p>
-                                        No registered services, you can add some on the settings page
-                                    </p>
+                    <div class="col-2 wd-course-navigator" style="flex-direction: row;">
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Notifications</a></li>
+                            <li class="list-group-item active"><a href="index.html">Profile</a></li>
+                            <li class="list-group-item"><a href="#">Files</a></li>
+                            <li class="list-group-item"><a href="#">Settings</a></li>
+                            <li class="list-group-item"><a href="#">ePortfolios</a></li>
+                            <li class="list-group-item"><a href="#">Shared Content</a></li>
+                            <li class="list-group-item"><a href="#">The Hub</a></li>
+                            <li class="list-group-item"><a href="#">Qwickly Course Tools</a></li>
+                            <li class="list-group-item"><a href="#">Global Announcements</a></li>
+                        </ul>
 
-                                    <h3>Biography</h3>
-                                    <p>
-                                        Student, Software Engineer (soon to be), video games and technology enthusiast.
-                                    </p>
+                    </div>
 
-                                    <h3>Links</h3>
-                                    <p>
-                                        <a href="#">YouTube</a>
-                                    </p>
-                                </td>
+                    <div class="col-5">
+                        
+                        <i class="fa fa-user" aria-hidden="true" style="font-size: 10em"></i>
+                        <br />
+                        <h2>Uzay Takil <i>(He/Him)</i></h2>
 
-                                <td>
-                                    <!-- Add href and image check location -->
-                                    <a href="edit.html"><button type="button" id="edit-profile"><img src="pencil.png" width="15px" height="15px" /> Edit Profile</button></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <br />
 
-                </td>
+                        <h3>Contact</h3>
+                        <p>
+                            No registered services, you can add some on the settings page
+                        </p>
+
+                        <h3>Biography</h3>
+                        <p>
+                            Student, Software Engineer (soon to be), video games and technology enthusiast.
+                        </p>
+
+                        <h3>Links</h3>
+                        <p>
+                            <a href="https://www.youtube.com/webdevtv">
+                                <i class="fa-solid fa-link" style="color: black"></i>
+                                YouTube <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3 wd-profile-summary float-end wd-edit-button">
+                            <a href="edit.html">
+                                <button class="btn btn-light btn-outline-dark text-nowrap" type="button"
+                                    id="edit-profile">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i> Edit Profile
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
 
 
-            </tr>
+            </div>
 
-        </tbody>
-    </table>
-
-
-
-
-
-
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,141 @@
+
+.wd-course-navigator {
+    margin-left: 30px;
+    margin-top: 30px;
+    /* Need to figure out a way around this margin fix */
+    margin-left: 20px;
+}
+
+.wd-course-navigator .list-group-item {
+    border: none;
+    color: red;
+    padding-left: 8px;
+}
+
+.wd-course-navigator .list-group-item a {
+    color: red;
+    text-decoration: none;
+}
+
+.wd-course-navigator .list-group {
+    border-radius: 0px;
+}
+
+.wd-course-navigator .list-group-item.active {
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+.wd-course-navigator .list-group-item.active a {
+    color: black;
+}
+
+.wd-navigation-option.active i {
+    color: red;
+}
+
+.wd-navigation-option.active {
+    background-color: white;
+}
+
+.wd-main-body {
+    margin-left: 70px;
+    margin-top: 15px;
+}
+
+.wd-module > .list-group-item a{
+    text-decoration: none;
+}
+
+.wd-module > .list-group-item {
+    text-decoration: none;
+    padding: 15px;
+}
+
+.wd-module {
+    border-radius: 0px;
+    margin-bottom: 30px;
+}
+
+.wd-sidebar-btns {
+    border-radius: 0px;
+}
+
+.wd-sidebar-btns > .list-group-item {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.wd-sidebar-btns > .list-group-item button {
+    width: 100%;
+    border-radius: 0px;
+}
+
+.wd-color-green {
+    color: green;
+}
+
+.wd-vertical-ellipsis {
+    margin-left: 10px;
+}
+
+.wd-profile-summary a {
+    text-decoration: None;
+}
+
+.wd-top-home-button {
+    margin-left: 5px;
+    height: 40px;
+    text-align: center;
+}
+
+.wd-top-home-button-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-coming-up-list li {
+    border: 0px;
+    text-decoration: none;
+}
+
+.wd-coming-up-list a {
+    text-decoration: none;
+    color: red;
+} 
+
+.breadcrumb {
+    margin-left: 10px;
+}
+
+.wd-module-link {
+    text-decoration: none;
+    color: red;
+}
+
+
+.wd-flex-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.wd-centered-table-col {
+    text-align: center;
+}
+
+.wd-centered-table-col > tr > td:first-child {
+    color: red;
+    text-align: left;
+}
+
+.wd-centered-table-col td > input {
+    text-align: center;
+}
+
+.wd-centered-table-head tr > th:not(:first-child) {
+    text-align: center;
+}
+
+

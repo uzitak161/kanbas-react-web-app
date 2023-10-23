@@ -1,0 +1,103 @@
+.wd-assignment-btn-grp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wd-ass-search {
+    width: 25% !important;
+    margin-left: 15px;
+}
+
+.wd-assignment {
+    border-left-color: green !important;
+    border-left-width: 5px !important;
+}
+
+.wd-assignment-name {
+    width: 100px;
+}
+
+.wd-assignment-name>p {
+    color: grey;
+    font-size: small;
+    margin-bottom: 0px;
+}
+
+.wd-assignment-icon {
+    color: green;
+}
+
+.wd-assignment-description {
+    font: grey;
+    font-size: 10;
+}
+
+.wd-thick {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.wd-flex-row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
+
+.wd-width-75px {
+    text-align: left;
+    width: 75px;
+}
+
+.wd-ass-edit-label-margins {
+    width: 200px;
+    text-align: right;
+}
+
+.wd-ass-edit-label-margins label {
+    float: right;
+}
+
+.wd-ass-group-label-margins {
+    margin-left: 70px;
+    margin-right: 10px;
+    padding-right: 20px;
+}
+
+.form-check {
+    margin-left: 200px;
+}
+
+.wd-book-icon {
+    float: left; 
+    width: 3%;
+}
+
+
+.wd-ass-search-input {
+    flex-grow: 1 !important;
+}
+
+.wd-top-home-button-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-color-black {
+    color: black;
+}
+
+
