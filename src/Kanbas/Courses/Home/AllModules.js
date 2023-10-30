@@ -1,10 +1,15 @@
 import './index.css';
 import db from "../../Database";
-import { FaRegAddressBook, FaRegCheckCircle, FaEllipsisV, FaPlus } from 'react-icons/fa';
+import { FaRegCheckCircle, FaEdit, FaTrashAlt } from 'react-icons/fa';
+import { useSelector, useDispatch } from "react-redux";
+import {
+    deleteModule,
+    setModule,
+} from "../Modules/modulesReducer";
 
 function AllModules({ courseId }) {
-    console.log(courseId.toString() === "RS101")
-    const modules = db.modules.filter(module => module.course === courseId)
+    const dispatch = useDispatch();
+    const modules = useSelector((state) => state.modulesReducer.modules).filter(module => module.course === courseId);
     return (
         <div className="">
             <ul className="list-group">
@@ -14,8 +19,8 @@ function AllModules({ courseId }) {
                             {module.name} - {module.description}
                             <span className="float-end">
                                 <FaRegCheckCircle className='wd-color-green' />
-                                <FaPlus className='ms-3' />
-                                <FaEllipsisV className='ms-3'/>
+                                <FaTrashAlt onClick={() => dispatch(deleteModule(module._id))} className='ms-3' style={{ color: 'red' }} />
+                                <FaEdit onClick={() => dispatch(setModule(module))} className='ms-3' />
                             </span>
                         </div>
                     </li>

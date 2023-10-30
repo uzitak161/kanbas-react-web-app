@@ -7,7 +7,6 @@ import AssignmentEdit from "./Assignments/edit";
 import Grades from "./Grades";
 
 
-
 function Courses() {
   return (
     <div style={{ marginLeft: 104 }} className="w-100">
