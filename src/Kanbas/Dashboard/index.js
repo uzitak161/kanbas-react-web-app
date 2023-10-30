@@ -1,30 +1,84 @@
 import { Link } from "react-router-dom";
+import { React, useState } from "react";
 import db from "../Database";
 import "./index.css";
 
+
 function Dashboard() {
-    const courses = db.courses;
+
+    const [courses, setCourses] = useState(db.courses);
+    const [course, setCourse] = useState({
+        name: "New Course", number: "New Number",
+        startDate: "2023-09-10", endDate: "2023-12-15",
+    });
+
+
+    const addNewCourse = () => {
+        setCourses([...courses, { ...course, _id: new Date().getTime() }]);
+    };
+
+    const deleteCourse = (courseId) => {
+        setCourses(courses.filter((course) => course._id !== courseId));
+    };
+
+    const updateCourse = () => {
+        setCourses(
+            courses.map((c) => {
+                if (c._id === course._id) {
+                    return course;
+                } else {
+                    return c;
+                }
+            })
+        );
+    };
+
+
     return (
-        <div>
-            <div className="list-group col-11 wd-dash-summary" style={{ marginLeft: 104 }}>
-                <h1>Dashboard</h1>
-                <hr />
-                <h3>Published Courses</h3>
-                <hr />
+        <div className="col-11 wd-dash-summary" style={{ marginLeft: 104 }}>
+            <h1>Dashboard</h1>
+            <h5>Course</h5>
+            <input value={course.name} className="form-control"
+                onChange={(e) => setCourse({ ...course, name: e.target.value })} />
+            <input value={course.number} className="form-control"
+                onChange={(e) => setCourse({ ...course, number: e.target.value })} />
+            <input value={course.startDate} className="form-control" type="date"
+                onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
+            <input value={course.endDate} className="form-control" type="date"
+                onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
+            <button onClick={addNewCourse} >
+                Add
+            </button>
+            <button onClick={updateCourse} >
+                Update
+            </button>
 
-                <div class="d-flex flex-row flex-wrap wd-card-container ">
 
+            <div className="d-flex flex-row flex-wrap wd-card-container ">
+
+                <div className="list-group w-75">
                     {courses.map((course) => (
-                        <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="card" style={{ width: 270 }}>
-                            <img class="card-img-top" src={require("./banner.png")} alt="Card img"></img>
-                            <div class="card-body">
-                                <h6 class="card-title">{course.number} {course.name}</h6>
-                                <p class="card-text">{course.number} {course._id} {course.startDate}</p>
-                                <span class="card-text wd-secondary-card-text">{course.startDate} - {course.endDate}</span>
-                            </div>
+                        <Link key={course._id}
+                            to={`/Kanbas/Courses/${course._id}`}
+                            className="list-group-item">
+                            {course.name}
+                            <button
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    deleteCourse(course._id);
+                                }}
+                                className="btn btn-danger float-end ms-3">
+                                Delete
+                            </button>
+                            <button onClick={(event) => {
+                                event.preventDefault();
+                                setCourse(course);
+                            }}
+                                className="btn btn-secondary float-end">
+                                Edit
+                            </button>
                         </Link>
                     ))}
-
                 </div>
 
 
@@ -33,103 +87,3 @@ function Dashboard() {
     );
 }
 export default Dashboard;
-
-
-
-
-
-{/* <div class="col-11 wd-dash-summary">
-                <h1>Dashboard</h1>
-                <hr />
-                <h3>Published Courses</h3>
-                <hr />
-
-                <div class="d-flex flex-row flex-wrap wd-card-container ">
-
-                    <div class="card" style="width: 270px;">
-                        <img class="card-img-top" src="banner.png" alt="Card image cap">
-                        <a href="../home.html">
-                            <div class="card-body">
-                                <h6 class="card-title">CS4550 12631 Web Development</h6>
-                                <p class="card-text">CS4550.12631.202410</p>
-                                <span class="card-text wd-secondary-card-text">202410_1 Fall 2023 Semester Full
-                                    Term</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card" style="width: 270px;">
-                        <img class="card-img-top" src="banner.png" alt="Card image cap">
-                        <a href="../home.html">
-                            <div class="card-body">
-                                <h6 class="card-title">CS4550 12631 Web Development</h6>
-                                <p class="card-text">CS4550.12631.202410</p>
-                                <span class="card-text wd-secondary-card-text">202410_1 Fall 2023 Semester Full
-                                    Term</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card" style="width: 270px;">
-                        <img class="card-img-top" src="banner.png" alt="Card image cap">
-                        <a href="../home.html">
-                            <div class="card-body">
-                                <h6 class="card-title">CS4550 12631 Web Development</h6>
-                                <p class="card-text">CS4550.12631.202410</p>
-                                <span class="card-text wd-secondary-card-text">202410_1 Fall 2023 Semester Full
-                                    Term</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card" style="width: 270px;">
-                        <img class="card-img-top" src="banner.png" alt="Card image cap">
-                        <a href="../home.html">
-                            <div class="card-body">
-                                <h6 class="card-title">CS4550 12631 Web Development</h6>
-                                <p class="card-text">CS4550.12631.202410</p>
-                                <span class="card-text wd-secondary-card-text">202410_1 Fall 2023 Semester Full
-                                    Term</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card" style="width: 270px;">
-                        <img class="card-img-top" src="banner.png" alt="Card image cap">
-                        <a href="../home.html">
-                            <div class="card-body">
-                                <h6 class="card-title">CS4550 12631 Web Development</h6>
-                                <p class="card-text">CS4550.12631.202410</p>
-                                <span class="card-text wd-secondary-card-text">202410_1 Fall 2023 Semester Full
-                                    Term</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card" style="width: 270px;">
-                        <img class="card-img-top" src="banner.png" alt="Card image cap">
-                        <a href="../home.html">
-                            <div class="card-body">
-                                <h6 class="card-title">CS4550 12631 Web Development</h6>
-                                <p class="card-text">CS4550.12631.202410</p>
-                                <span class="card-text wd-secondary-card-text">202410_1 Fall 2023 Semester Full
-                                    Term</span>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card" style="width: 270px;">
-                        <img class="card-img-top" src="banner.png" alt="Card image cap">
-                        <a href="../home.html">
-                            <div class="card-body">
-                                <h6 class="card-title">CS4550 12631 Web Development</h6>
-                                <p class="card-text">CS4550.12631.202410</p>
-                                <span class="card-text wd-secondary-card-text">202410_1 Fall 2023 Semester Full
-                                    Term</span>
-                            </div>
-                        </a>
-                    </div>
-
-
-                </div>
-            </div> */}
