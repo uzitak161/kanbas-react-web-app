@@ -1,15 +1,17 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import { FaRegAddressBook, FaRegCheckCircle, FaEllipsisV } from 'react-icons/fa';
 import "./index.css"
 import Breadcrumb from "../CourseNavigation/breadcrumb";
 import CourseNavigation from "../CourseNavigation";
 import { useSelector, useDispatch } from "react-redux";
-import { selectAssignment } from "./assignmentsReducer";
+import { addAssignment, selectAssignment } from "./assignmentsReducer";
+import { useNavigate } from "react-router-dom";
 
 
 function TopButtons() {
+  const navigate = useNavigate();
+  const { courseId } = useParams();
   return (
     <div className="mb-3 wd-assignment-btn-grp mt-3">
       <div className="wd-ass-search-input">
@@ -20,8 +22,9 @@ function TopButtons() {
           type="button">
           <i className="fa-solid fa-plus"></i> Group
         </button>
-        <button className="btn btn-danger text-nowrap wd-top-home-button btn-sm" type="button">
-          <i className="fa-solid fa-plus"></i> Assignment
+        <button onClick={() => navigate(`/Kanbas/Courses/${courseId}/Assignments/new`)}
+        className="btn btn-danger text-nowrap wd-top-home-button btn-sm" type="button">
+          <i className="fa-solid fa-plus"></i> + Assignment
         </button>
         <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
           type="button">

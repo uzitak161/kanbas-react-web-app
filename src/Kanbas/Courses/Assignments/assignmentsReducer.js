@@ -24,10 +24,16 @@ const assignmentsSlice = createSlice({
       );
     },
     updateAssignment: (state, action) => {
-      state.assignment = action.payload;
+      state.assignments = state.assignments.map((assignment) => {
+        if (assignment._id === action.payload._id) {
+          return action.payload;
+        } else {
+          return assignment;
+        }
+      });
     },
     selectAssignment: (state, action) => {
-      state.assignment = state.assignments.find((assignment) => assignment._id === action.payload._id);
+      state.assignment = action.payload;
     },
   }
 });
