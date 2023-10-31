@@ -5,6 +5,8 @@ import { FaRegAddressBook, FaRegCheckCircle, FaEllipsisV } from 'react-icons/fa'
 import "./index.css"
 import Breadcrumb from "../CourseNavigation/breadcrumb";
 import CourseNavigation from "../CourseNavigation";
+import { useSelector, useDispatch } from "react-redux";
+import { selectAssignment } from "./assignmentsReducer";
 
 
 function TopButtons() {
@@ -33,7 +35,8 @@ function TopButtons() {
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = db.assignments;
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments)
+  const dispatch = useDispatch()
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
   return (
@@ -72,6 +75,7 @@ function Assignments() {
                     key={assignment._id}
                     to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
                     className=""
+                    onClick={() => dispatch(selectAssignment(assignment))}
                   >
 
                     <div className="mt-3" style={{ float: "left", width: "3%" }}>
@@ -81,9 +85,9 @@ function Assignments() {
                     <div className="wd-assignment-name" style={{ float: "left", width: "75%" }}>
                       <a className="wd-thick" href="edit.html">{assignment.title}</a>
                       <p>
-                        Week 0 - SETUP = Week starting on Monday September 5th |
+                        {assignment.description} |
                       </p>
-                      <p> Due September 18, 2022 at 11:59pm | 100 pts</p>
+                      <p> Due {assignment.due} | {assignment.points} pts</p>
                     </div>
 
                     <div className="float-end mt-3">
@@ -104,6 +108,4 @@ function Assignments() {
   );
 }
 
-// 
-// style="float: left; width: 75%"
 export default Assignments;

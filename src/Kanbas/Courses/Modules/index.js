@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import '../Home/index.css';
 import TopButtons from "../Home/TopButtons";
 import AllModules from "../Home/AllModules";
@@ -7,6 +6,7 @@ import Breadcrumb from "../CourseNavigation/breadcrumb";
 import CourseNavigation from "../CourseNavigation";
 import { useSelector, useDispatch } from "react-redux";
 import {
+    updateModule,
     addModule,
     setModule,
 } from "./modulesReducer";
@@ -50,6 +50,7 @@ function Modules() {
                                 </div>
                                 <div className="col">
                                     <div className="form-group">
+                                        <button onClick={() => dispatch(updateModule(module))} type="button" className="btn btn-info">Update</button>
                                         <button onClick={() => dispatch(addModule({ ...module, course: courseId }))} type="button" className="btn btn-success">Submit</button>
                                     </div>
                                 </div>
