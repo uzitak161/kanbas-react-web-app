@@ -26,7 +26,7 @@ function AssignmentEditor() {
       dispatch(addAssignment({ ...assignment, course: courseId }));
     } else {
       dispatch(updateAssignment(assignment));
-    }   
+    }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
@@ -50,6 +50,46 @@ function AssignmentEditor() {
               className="form-control"
             ></textarea>
             <hr />
+
+            <div>
+              <label for="points-inpt" className="form-label">Points</label>
+              <input
+                value={assignment.points}
+                onChange={(e) => dispatch(selectAssignment({ ...assignment, points: e.target.value }))}
+                id="points-inpt"
+                type="number"
+                className="form-control w-25" />
+              <br />
+              <label for="due-date-inpt" className="form-label">Due Date</label>
+              <input
+                value={assignment.dueDate}
+                onChange={(e) => dispatch(selectAssignment({ ...assignment, dueDate: e.target.value }))}
+                id="due-date-inpt"
+                type="date"
+                className="form-control w-50" />
+              <br />
+
+              <label for="available-from-date" className="form-label">Available-From</label>
+              <input
+                value={assignment.availableFromDate}
+                onChange={(e) => dispatch(selectAssignment({ ...assignment, availableFromDate: e.target.value }))}
+                id="available-from-date"
+                type="date"
+                className="form-control w-50" />
+              <br />
+
+              <label for="available-to-date" className="form-label">Available-To</label>
+              <input
+                value={assignment.availableToDate}
+                onChange={(e) => dispatch(selectAssignment({ ...assignment, availableToDate: e.target.value }))}
+                id="available-to-date"
+                type="date"
+                className="form-control w-50" />
+              <br />
+
+
+            </div>
+
             <div className="float-end">
               <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
                 className="btn btn-danger">

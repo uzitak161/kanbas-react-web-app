@@ -90,7 +90,7 @@ function Assignments() {
                       <p>
                         {assignment.description} |
                       </p>
-                      <p> Due {assignment.due} | {assignment.points} pts</p>
+                      <p> Due {assignment.dueDate} | {assignment.points} pts</p>
                     </div>
 
                     <div className="float-end mt-3">
