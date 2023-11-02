@@ -36,8 +36,8 @@ function Modules() {
                             <TopButtons />
                             <AllModules courseId={courseId} />
                         </div>
-                        <form>
-                            <div className="row">
+                        <form className="mx-3 border rounded h-50">
+                            <div className="row my-2">
                                 <div className="col">
                                     <div className="form-group">
                                         <input type="text"
@@ -50,7 +50,7 @@ function Modules() {
                                 </div>
                                 <div className="col">
                                     <div className="form-group">
-                                        <button onClick={() => dispatch(updateModule(module))} type="button" className="btn btn-info">Update</button>
+                                        <button onClick={() => dispatch(updateModule(module))} type="button" className="btn btn-info me-2">Update</button>
                                         <button onClick={() => dispatch(addModule({ ...module, course: courseId }))} type="button" className="btn btn-success">Submit</button>
                                     </div>
                                 </div>

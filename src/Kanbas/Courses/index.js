@@ -7,7 +7,8 @@ import AssignmentEdit from "./Assignments/edit";
 import Grades from "./Grades";
 
 
-function Courses() {
+function Courses({courses}) {
+  console.log(courses)
   return (
     <div style={{ marginLeft: 104 }} className="w-100">
           <div>

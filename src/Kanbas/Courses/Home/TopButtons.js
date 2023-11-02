@@ -28,9 +28,9 @@ function TopButtons() {
                     <li><a className="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
-            <button className="btn btn-danger text-nowrap wd-top-home-button btn-sm" type="button">
+            {/* <button className="btn btn-danger text-nowrap wd-top-home-button btn-sm" type="button">
                 <i className="fa-solid fa-plus"></i>  + Module
-            </button>
+            </button> */}
             <button className="wd-settings-button btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
                 type="button">
                     <FaEllipsisV className="pe-2 pb-1" /> 

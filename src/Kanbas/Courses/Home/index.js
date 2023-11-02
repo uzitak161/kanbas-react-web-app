@@ -11,14 +11,7 @@ import CourseNavigation from "../CourseNavigation";
 
 
 function Home() {
-
-
     const { courseId } = useParams();
-    console.log(courseId === "RS101")
-    const course = db.courses.find(
-        (course) => course._id === courseId);
-
-
     return (
         <div>
             <div className="position-fixed d-none d-md-block">
