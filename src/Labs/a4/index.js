@@ -11,6 +11,7 @@ import ObjectStateVariable from "./ObjectStateVariables";
 import ArrayStateVariable from "./ArrayStateVariables";
 import ParentStateComponent from "./ParentStateComponent";
 import ReduxExamples from "./ReduxExamples";
+import EventObject from "./EventObject";
 
 function Assignment4 () {
   function sayHello() {
@@ -19,11 +20,12 @@ function Assignment4 () {
  return(
    <div>
      <h1>Assignment 4</h1>
-     <ReduxExamples />
+     <ReduxExamples /> 
      <Add a={1} b={2} />
      <ClickEvent />
      <PassingDataOnEvent />
      <PassingFunctions theFunction={sayHello} />
+     <EventObject />
      <Counter />
      <BooleanStateVariables />
      <StringStateVariables />
