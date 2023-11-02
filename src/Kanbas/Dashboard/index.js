@@ -8,8 +8,6 @@ function Dashboard(
         deleteCourse, updateCourse }
 
 ) {
-    console.log(courses)
-
 
     return (
         <div className="col-11 wd-dash-summary" style={{ marginLeft: 104 }}>
@@ -37,31 +35,37 @@ function Dashboard(
 
             <div className="d-flex flex-row flex-wrap wd-card-container ">
 
-                <div className="list-group w-75">
+                <div class="d-flex flex-row flex-wrap wd-card-container ">
+
                     {courses.map((course) => (
-                        <Link key={course._id}
-                            to={`/Kanbas/Courses/${course._id}`}
-                            className="list-group-item">
-                            {course.name}
-                            <button
-                                onClick={(event) => {
-                                    event.preventDefault();
-                                    deleteCourse(course._id);
-                                }}
-                                className="btn btn-danger float-end ms-3">
-                                Delete
-                            </button>
-                            <button onClick={(event) => {
-                                event.preventDefault();
-                                setCourse(course);
-                            }}
-                                className="btn btn-secondary float-end">
-                                Edit
-                            </button>
+                        <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="card" style={{ width: 270 }}>
+                            <img class="card-img-top" src={require("./banner.png")} alt="Card img"></img>
+                            <div class="card-body p-2">
+                                <h6 class="card-title">{course.number} {course.name}</h6>
+                                <p class="card-text">{course.number} {course._id} {course.startDate}</p>
+                                <span class="card-text wd-secondary-card-text">{course.startDate} - {course.endDate}</span>
+                                <div>
+                                    <button
+                                        onClick={(event) => {
+                                            event.preventDefault();
+                                            deleteCourse(course._id);
+                                        }}
+                                        className="btn btn-danger float-end ms-2 mt-1">
+                                        Delete
+                                    </button>
+                                    <button onClick={(event) => {
+                                        event.preventDefault();
+                                        setCourse(course);
+                                    }}
+                                        className="btn btn-secondary float-end mt-1">
+                                        Edit
+                                    </button>
+                                </div>
+                            </div>
                         </Link>
                     ))}
-                </div>
 
+                </div>
 
             </div>
         </div>
