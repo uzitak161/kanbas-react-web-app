@@ -18,6 +18,16 @@ function Kanbas() {
 
   const URL = "http://localhost:4000/api/courses";
 
+  const deleteCourse = async (courseId) => {
+    const response = await axios.delete(
+      `${URL}/${courseId.$oid}`
+    );
+    setCourses(courses.filter(
+      (c) => c._id !== courseId));
+  };
+
+
+
   const addNewCourse = async () => {
     const response = await axios.post(URL, course);
     setCourses([
@@ -34,20 +44,22 @@ function Kanbas() {
     findAllCourses();
   }, []);
 
-  const deleteCourse = (courseId) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  };
-  const updateCourse = () => {
+  const updateCourse = async (course) => {
+    const response = await axios.put(
+      `${URL}/${course._id.$oid}`,
+      course
+    );
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
           return course;
-        } else {
-          return c;
         }
+        return c;
       })
     );
+    setCourse({ name: "" });
   };
+
 
   return (
     <Provider store={store}>

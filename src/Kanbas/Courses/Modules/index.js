@@ -10,6 +10,8 @@ import {
     addModule,
     setModule,
 } from "./modulesReducer";
+import { createModule } from "./client";
+import * as client from "./client";
 
 
 function Modules() {
@@ -17,6 +19,18 @@ function Modules() {
     const { courseId } = useParams();
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch()
+
+    const handleAddModule = () => {
+        createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
+
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    };
+
 
     return (
         <div className="position-fixed">
@@ -34,7 +48,7 @@ function Modules() {
 
                         <div className="w-75">
                             <TopButtons />
-                            <AllModules courseId={courseId} />
+                            <AllModules />
                         </div>
                         <form>
                             <div className="row">
@@ -50,8 +64,8 @@ function Modules() {
                                 </div>
                                 <div className="col">
                                     <div className="form-group">
-                                        <button onClick={() => dispatch(updateModule(module))} type="button" className="btn btn-info">Update</button>
-                                        <button onClick={() => dispatch(addModule({ ...module, course: courseId }))} type="button" className="btn btn-success">Submit</button>
+                                        <button onClick={handleUpdateModule} type="button" className="btn btn-info">Update</button>
+                                        <button onClick={handleAddModule} type="button" className="btn btn-success">Submit</button>
                                     </div>
                                 </div>
                             </div>

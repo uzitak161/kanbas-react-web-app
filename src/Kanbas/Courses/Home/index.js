@@ -34,7 +34,7 @@ function Home() {
 
                             <div className="w-75">
                                 <TopButtons />
-                                <AllModules courseId={courseId} />
+                                <AllModules />
                             </div>
                             <RightSideBarButtons />
                         </div>
@@ -52,7 +52,7 @@ function Home() {
 
                     <div className="w-75">
                         <TopButtons />
-                        <AllModules courseId={courseId} />
+                        <AllModules />
                     </div>
                     <RightSideBarButtons />
                 </div>
