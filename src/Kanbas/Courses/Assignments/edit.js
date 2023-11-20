@@ -23,7 +23,7 @@ function AssignmentEditor() {
   const navigate = useNavigate();
   const handleSave = () => {
     if (pathname.includes("new")) {
-      client.createAssignment(assignment).then((assignment) => {
+      client.createAssignment({ ...assignment, course: courseId }).then((assignment) => {
         dispatch(addAssignment({ ...assignment, course: courseId }));
       });
     } else {
