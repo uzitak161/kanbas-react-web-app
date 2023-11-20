@@ -33,6 +33,7 @@ function AssignmentEditor() {
     }
     const newAssignments = findAssignmentsForCourse(courseId);
     setAssignments(newAssignments);
+    selectAssignment({})
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
