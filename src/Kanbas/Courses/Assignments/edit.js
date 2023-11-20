@@ -6,6 +6,7 @@ import CourseNavigation from "../CourseNavigation";
 import { useSelector, useDispatch } from "react-redux";
 import { addAssignment, selectAssignment, updateAssignment } from "./assignmentsReducer";
 import { useLocation } from "react-router-dom";
+import * as client from "./client";
 
 
 function AssignmentEditor() {
@@ -21,11 +22,13 @@ function AssignmentEditor() {
   const navigate = useNavigate();
   const handleSave = () => {
     if (pathname.includes("new")) {
-      console.log("NEW")
-      console.log(assignment)
-      dispatch(addAssignment({ ...assignment, course: courseId }));
+      client.createAssignment(assignment).then((assignment) => {
+        dispatch(addAssignment({ ...assignment, course: courseId }));
+      });
     } else {
-      dispatch(updateAssignment(assignment));
+      client.updateAssignment(assignment).then((assignment) => {
+        dispatch(updateAssignment(assignment));
+      });
     }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
