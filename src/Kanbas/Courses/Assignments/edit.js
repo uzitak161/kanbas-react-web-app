@@ -4,9 +4,10 @@ import "./index.css"
 import Breadcrumb from "../CourseNavigation/breadcrumb";
 import CourseNavigation from "../CourseNavigation";
 import { useSelector, useDispatch } from "react-redux";
-import { addAssignment, selectAssignment, updateAssignment } from "./assignmentsReducer";
+import { addAssignment, selectAssignment, setAssignments, updateAssignment } from "./assignmentsReducer";
 import { useLocation } from "react-router-dom";
 import * as client from "./client";
+import { findAssignmentsForCourse } from "./client";
 
 
 function AssignmentEditor() {
@@ -30,6 +31,8 @@ function AssignmentEditor() {
         dispatch(updateAssignment(assignment));
       });
     }
+    const newAssignments = findAssignmentsForCourse(courseId);
+    setAssignments(newAssignments);
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
