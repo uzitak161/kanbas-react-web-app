@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { FaRegAddressBook, FaRegCheckCircle, FaEllipsisV } from 'react-icons/fa';
 import "./index.css"
 import Breadcrumb from "../CourseNavigation/breadcrumb";
 import CourseNavigation from "../CourseNavigation";
 import { useSelector, useDispatch } from "react-redux";
-import { addAssignment, selectAssignment } from "./assignmentsReducer";
+import { addAssignment, selectAssignment, setAssignments } from "./assignmentsReducer";
 import { useNavigate } from "react-router-dom";
+import { findAssignmentsForCourse } from "./client";
 
 
 function TopButtons() {
@@ -23,7 +24,7 @@ function TopButtons() {
           <i className="fa-solid fa-plus"></i> Group
         </button>
         <button onClick={() => navigate(`/Kanbas/Courses/${courseId}/Assignments/new`)}
-        className="btn btn-danger text-nowrap wd-top-home-button btn-sm" type="button">
+          className="btn btn-danger text-nowrap wd-top-home-button btn-sm" type="button">
           <i className="fa-solid fa-plus"></i> + Assignment
         </button>
         <button className="btn btn-light btn-outline-dark text-nowrap wd-top-home-button btn-sm"
@@ -38,10 +39,19 @@ function TopButtons() {
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = useSelector((state) => state.assignmentsReducer.assignments)
+  
   const dispatch = useDispatch()
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
+
+  useEffect(() => {
+    findAssignmentsForCourse(courseId)
+      .then((assignments) => dispatch(setAssignments(assignments)));
+  }, []);
+
+  const assignments = useSelector((state) => state.assignmentsReducer.assignments)
+
+
+
+
   return (
     <div>
       <Breadcrumb />
@@ -70,7 +80,7 @@ function Assignments() {
                   </span>
                 </div>
               </li>
-              {courseAssignments.map((assignment) => (
+              {assignments.map((assignment) => (
 
                 <li className="wd-assignment list-group-item">
 
