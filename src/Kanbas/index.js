@@ -21,7 +21,7 @@ function Kanbas() {
 
   const deleteCourse = async (courseId) => {
     const response = await axios.delete(
-      `${URL}/${courseId.$oid}`
+      `${URL}/${courseId}`
     );
     setCourses(courses.filter(
       (c) => c._id !== courseId));
