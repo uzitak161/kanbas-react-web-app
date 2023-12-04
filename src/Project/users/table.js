@@ -77,7 +77,7 @@ function UserTable() {
                             </select>
                         </td>
                         <td>
-                            <BsPlusCircleFill onClick={createUser} />
+                            <BsPlusCircleFill className="me-2 fs-1" onClick={createUser} />
                             <BsFillCheckCircleFill onClick={updateUser}
                                 className="me-2 text-success fs-1 text" />
 
@@ -95,7 +95,7 @@ function UserTable() {
                                 <button className="btn btn-warning me-2">
                                     <BsPencil onClick={() => selectUser(user)} />
                                 </button>
-                                <button onClick={() => deleteUser(user)}>
+                                <button className="btn btn-danger" onClick={() => deleteUser(user)}>
                                     <BsTrash3Fill />
                                 </button>
                             </td>
